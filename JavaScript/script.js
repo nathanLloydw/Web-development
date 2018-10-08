@@ -1,3 +1,3 @@
  function changeText() {
-    document.getElementById("test").innerHTML = "Paragraph changed... in body";
+    document.getElementById("test").innerHTML = "Paragraph changed... in external file";
 }
