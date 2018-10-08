@@ -1,23 +1,38 @@
 <!DOCTYPE html>
 <html>
-<body>
-
-<h3>JavaScript!</h3>
-
-<p id="test">hello.</p>
-
-<button type="button" onclick='document.getElementById("test").innerHTML = "Hello JavaScript!"'>Change text</button>
-
-<button type="button" onclick="document.getElementById('test').style.display='none'">Hide!</button>
-  
-<button type="button" onclick="document.getElementById('test').style.display='block'">Show!</button>
-  
-<button type="button" onclick="document.getElementById('test').style.fontSize='35px'">Grow!</button>
-  
-<button type="button" onclick="document.getElementById('test').style.fontSize='12px'">Shrink!</button>
-  
- <script>
-  //javascript goes here
+ <head>
+  <script>
+  function myFunction1() {
+    document.getElementById("test").innerHTML = "Paragraph changed... in Head";
+}
   </script>
-</body>
+ </head> 
+ 
+ <body>
+
+  <h3>JavaScript!</h3>
+
+  <p id="test">hello.</p>
+
+  <button type="button" onclick='document.getElementById("test").innerHTML = "Hello JavaScript!"'>Change text</button>
+
+  <button type="button" onclick="document.getElementById('test').style.display='none'">Hide!</button>
+  
+  <button type="button" onclick="document.getElementById('test').style.display='block'">Show!</button>
+  
+  <button type="button" onclick="document.getElementById('test').style.fontSize='35px'">Grow!</button>
+  
+  <button type="button" onclick="document.getElementById('test').style.fontSize='12px'">Shrink!</button>
+   
+  <button type="button" onclick="myFunction1()">head</button>
+   
+  <button type="button" onclick="myFunction2()">body</button>
+  
+  <script>
+  //javascript goes here
+    function myFunction2() {
+    document.getElementById("test").innerHTML = "Paragraph changed... in body";
+}
+  </script>
+ </body>
 </html>
