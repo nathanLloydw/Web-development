@@ -1,60 +1,18 @@
-<!DOCTYPE html>
-<html>
- <head>
-  
- </head> 
+<HTML>
+  <HEAD>
+    <title>Ghost</title>
+    <link rel="stylesheet" href="styles.css">
+  </HEAD>
  
- <body>
-
-  <h3>JavaScript!</h3>
-
-  <p id="test">hello.</p>
-  
-  <p id="math">quick math </p>
-
-  <button type="button" onclick='document.getElementById("test").innerHTML = "Hello JavaScript!"'>Change text</button>
-
-  <button type="button" onclick="document.getElementById('test').style.display='none'">Hide!</button>
-  
-  <button type="button" onclick="document.getElementById('test').style.display='block'">Show!</button>
-  
-  <button type="button" onclick="document.getElementById('test').style.fontSize='35px'">Grow!</button>
-  
-  <button type="button" onclick="document.getElementById('test').style.fontSize='12px'">Shrink!</button>
-   
-  <button type="button" onclick="changeText()">body</button>
-  
-  <button type="button" onclick="document.write(5 + 12)">5 + 12</button> 
-  
-  <button type="button" onclick="window.alert(5 * 6)">5 * 6</button> 
-  <script src="JavaScript/script.js"></script>
-  <script>
-   
-   var x,y,z;
-   
-   x= 5;
-   y= 100;
-   z= x*y;
-   var pi = 3.14, name = "john";
-   name += " doe";
-   
-   document.getElementById('math').innerHTML = 5 + 6; //overrides text in the math id 
-   console.log("quick math " +" : " + (z + y) * 3); //logging
-   console.log(name + " ... " + pi);
-   
-   /*
-   key words:
-   -break
-   -continue
-   -do ... while
-   -for
-   -function
-   -if ... else
-   -return
-   -switch
-   -try ... catch
-   -var
-   */
-  </script>
- </body>
-</html>
+  <BODY>
+    <div id="cursor"></div>
+    <form>
+	     <label>
+		      Select an emoji
+	     </label>
+	     <select>
+		      <option value="👻" selected>👻</option>
+	     </select>
+    </form>
+  </BODY>
+</HTML>
