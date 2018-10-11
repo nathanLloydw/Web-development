@@ -1,14 +1,14 @@
 
  a 
  {
-   color: lightgreen;
+   color: green;
  }
 #ID:hover
 {
- color: blue
+ color: blue;
 }
 
 .Class:hover
 {
- color: red
+ color: red;
 }
