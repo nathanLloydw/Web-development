@@ -36,30 +36,18 @@ console.log(difficultStuff);
 var math = multiply(4,5);
 console.log(math);
 
-var myImage = document.getElementById('img');
 var myHTML = document.querySelector('html');
-
 myHTML.onclick = function() { console.log("Click click!"); }
-myImage.onClick = function()
+
+window.onload = function() 
 {
-  console.log("image clicked");
-  var Src = myImage.getAttribute('src');
-  if(Src === 'resources/icon.png')
+  document.getElementById('img').addEventListener('click', function (e) 
   {
-    myImage.setAttribute('src','resources/icon2.png');
-  }
-  else if(Src === 'resources/icon2.png')
-  {
-    myImage.setAttribute('src','resources/icon3.png');
-  }
-  else if(Src === 'resources/icon3.png')
-  {
-    myImage.setAttribute('src','resources/icon4.png');
-  }
-  else
-  {
-    console.log("i broke it!");
-  }
-}
+    var img = document.createElement('img');
+    img.setAttribute('src', 'resources/icon2.png');
+    e.target.appendChild(img);
+  });
+};
+
 
 
