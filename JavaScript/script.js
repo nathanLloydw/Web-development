@@ -42,7 +42,23 @@ var myHTML = document.querySelector('html');
 myHTML.onclick = function() { console.log("Click click!"); }
 myImage.onClick = function()
 {
- 
+  var Src = myImage.getAttribute('src');
+  if(Src === 'resources/icon.png')
+  {
+    myImage.setAttribute('src','resources/icon2.png');
+  }
+  else if(Src === 'resources/icon2.png')
+  {
+    myImage.setAttribute('src','resources/icon3.png');
+  }
+  else if(Src === 'resources/icon3.png')
+  {
+    myImage.setAttribute('src','resources/icon4.png');
+  }
+  else
+  {
+    console.log("i broke it!");
+  }
 }
 
 
