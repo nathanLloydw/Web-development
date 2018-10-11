@@ -57,14 +57,11 @@ myHTML.onclick = function()
     {
       myImage.setAttribute ('src','resources/icon4.png');
     }
-    else if (mySrc === 'resources/icon4.png')
+    else 
     {
       myImage.setAttribute ('src','resources/icon.png');
     }
-    else
-    {
-       console.log("i dun fudged it...");
-    }
+   
 }
 
 
