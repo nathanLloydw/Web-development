@@ -48,18 +48,26 @@ myHTML.onclick = function()
     if(mySrc === 'resources/icon.png') 
     {
       myImage.setAttribute ('src','resources/icon2.png');
+      myImage.setAttribute ('width','50');
+      myImage.setAttribute ('height','100');
     }
     else if(mySrc === 'resources/icon2.png')
     {
       myImage.setAttribute ('src','resources/icon3.png');
+      myImage.setAttribute ('width','50');
+      myImage.setAttribute ('height','100');
     } 
     else if (mySrc === 'resources/icon3.png')
     {
       myImage.setAttribute ('src','resources/icon4.png');
+      myImage.setAttribute ('width','50');
+      myImage.setAttribute ('height','100');
     }
     else 
     {
       myImage.setAttribute ('src','resources/icon.png');
+      myImage.setAttribute ('width','50');
+      myImage.setAttribute ('height','100');
     }
    
 }
