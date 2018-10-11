@@ -3,6 +3,7 @@ var n = 16;
 var name = "bob";
 var bool = true;
 var booksOfTheBible = ['john','genesis','daniel','exodus'];
+
 var god = {name: "God", age: 2018, magic: true};
 
 n = n + 1;
@@ -13,22 +14,24 @@ n = ((n - 2) * 3) / 4;
 
 if(n === 12)
 {
- console.log("true"); 
+ console.log("true "+n); 
 }
 else
 {
-  console.log("false");
+  console.log("false "+n);
 }
 
-function doSomethingDifficult(){
+function doSomethingDifficult()
+{
   return "i have done the impossible.";
+}
+function multiply(num1,num2)
+{
+  return (num1*num2);
 }
 
 var difficultStuff = doSomethingDifficult();
-
 console.log(difficultStuff);
 
-document.querySelector("body").onClick = function() {
-  // do something e.g alert
-  console.log("Click click!");
-};
+var math = multiply(4,5);
+console.log(math);
