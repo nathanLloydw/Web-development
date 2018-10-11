@@ -28,7 +28,7 @@ var difficultStuff = doSomethingDifficult();
 
 console.log(difficultStuff);
 
-document.querySelector('body').onClick = function() {
+document.querySelector("body").onClick = function() {
   // do something e.g alert
   console.log("Click click!");
 };
