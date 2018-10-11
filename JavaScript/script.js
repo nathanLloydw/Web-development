@@ -42,6 +42,7 @@ var myHTML = document.querySelector('html');
 myHTML.onclick = function() { console.log("Click click!"); }
 myImage.onClick = function()
 {
+  console.log("image clicked");
   var Src = myImage.getAttribute('src');
   if(Src === 'resources/icon.png')
   {
