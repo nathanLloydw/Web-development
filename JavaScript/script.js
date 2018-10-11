@@ -7,17 +7,17 @@ var god = {name: "God", age: 2018, magic: true};
 
 n = n + 1;
 
-document.write('hello'+' world');
+console.log('hello'+' world');
 
 n = ((n - 2) * 3) / 4;
 
 if(n === 12)
 {
- document.write("true"); 
+ console.log("true"); 
 }
 else
 {
-  document.write("false");
+  console.log("false");
 }
 
 function doSomethingDifficult(){
@@ -26,9 +26,9 @@ function doSomethingDifficult(){
 
 var difficultStuff = doSomethingDifficult();
 
-document.write(difficultStuff);
+console.log(difficultStuff);
 
 document.querySelector(‘body’).onClick = function() {
   // do something e.g alert
-  alert(“Click click!”);
+  console.log(“Click click!”);
 };
