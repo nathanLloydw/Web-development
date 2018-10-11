@@ -21,7 +21,7 @@ else
 }
 
 function doSomethingDifficult(){
-  return "i have done the impossible!";
+  return "i have done the impossible.";
 }
 
 var difficultStuff = doSomethingDifficult();
