@@ -36,6 +36,5 @@ console.log(difficultStuff);
 var math = multiply(4,5);
 console.log(math);
 
-document.querySelector('html').onclick = function() {
-    console.log("Click click!");
-}
+var myHTML = document.querySelector('html');
+myHTML.onclick = function() { console.log("Click click!"); }
