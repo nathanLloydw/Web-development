@@ -21,14 +21,14 @@ else
 }
 
 function doSomethingDifficult(){
-  return 'i have done the impossible!';
+  return "i have done the impossible!";
 }
 
 var difficultStuff = doSomethingDifficult();
 
 console.log(difficultStuff);
 
-document.querySelector(‘body’).onClick = function() {
+document.querySelector('body').onClick = function() {
   // do something e.g alert
-  console.log(“Click click!”);
+  console.log("Click click!");
 };
