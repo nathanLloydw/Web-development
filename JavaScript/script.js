@@ -48,25 +48,25 @@ myHTML.onclick = function()
     if(mySrc === 'resources/icon.png') 
     {
       myImage.setAttribute ('src','resources/icon2.png');
-      myImage.setAttribute ('width','250');
+      myImage.setAttribute ('width','500');
       myImage.setAttribute ('height','500');
     }
     else if(mySrc === 'resources/icon2.png')
     {
       myImage.setAttribute ('src','resources/icon3.png');
-      myImage.setAttribute ('width','250');
+      myImage.setAttribute ('width','500');
       myImage.setAttribute ('height','500');
     } 
     else if (mySrc === 'resources/icon3.png')
     {
       myImage.setAttribute ('src','resources/icon4.png');
-      myImage.setAttribute ('width','250');
+      myImage.setAttribute ('width','500');
       myImage.setAttribute ('height','500');
     }
     else 
     {
       myImage.setAttribute ('src','resources/icon.png');
-      myImage.setAttribute ('width','250');
+      myImage.setAttribute ('width','500');
       myImage.setAttribute ('height','500');
     }
    
