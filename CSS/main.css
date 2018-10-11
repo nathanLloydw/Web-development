@@ -3,3 +3,12 @@
  {
    color: lightgreen;
  }
+#id:hover
+{
+ color: blue
+}
+
+.class:hover
+{
+ color: red
+}
