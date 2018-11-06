@@ -4,39 +4,7 @@
 <html>
 <head>
 <title>Snake</title>
-<style>
-    html 
-	{
-        text-align: center;
-        font-family: Helvetica, Arial, Helvetica, sans-serif;
-    }
-
-    #board 
-	{
-        width: calc(26 * 24px);
-        margin: auto;
-    }
-
-    #board div 
-	{
-        background-color: black;
-        border: 1px solid grey;
-        box-sizing: border-box;
-        float: left;
-        width: 24px;
-        height: 24px;
-    }
-
-    #board .snake 
-	{
-        background-color: gray;
-    }
-
-    #board .apple 
-	{
-        background-color: green;
-    }
-</style>
+<link type="text/css" rel="stylesheet" href="CSS/snake.css">
 </head>
 
 <body onload="initGame()" onkeydown="enterKey(event)">
