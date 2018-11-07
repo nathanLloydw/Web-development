@@ -84,14 +84,14 @@ function gameLoop()
    // Check for walls, and restart if we collide with any
    if (snakeX < 0 || snakeY < 0 || snakeX >= boardWidth || snakeY >= boardHeight) 
    {
-      window.prompt("sometext","defaultText");
+      window.prompt("congrats, your score is "+snakeLength+". Please input your name to add it to the leader board. ","bob marley");
       startGame();
    }
 
    // Tail collision
    if (board[snakeY][snakeX].snake > 0) 
    {
-      window.prompt("sometext","defaultText");
+      window.prompt("congrats, your score is "+snakeLength+". Please input your name to add it to the leader board. ","bob marley");
       startGame();
    }
 
