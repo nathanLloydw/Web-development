@@ -4,14 +4,50 @@
 <html>
     
   <head>
-    <title>Snake</title>
+     <title>Snake</title>
+     <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-app.js"></script>
+
+     <script>
+       // Initialize Firebase
+       var config = {
+          apiKey: "AIzaSyBTvDQMnV2GayyauUY5BzeKfoDJm0tL7Ag",
+          authDomain: "snakeleaderboard-a5c20.firebaseapp.com",
+          databaseURL: "https://snakeleaderboard-a5c20.firebaseio.com",
+          projectId: "snakeleaderboard-a5c20",
+          storageBucket: "snakeleaderboard-a5c20.appspot.com",
+          messagingSenderId: "185077223124"
+          };
+       firebase.initializeApp(config);
+
+
+     </script>
+     <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-database.js"></script>
+
     <link type="text/css" rel="stylesheet" href="../CSS/snake.css">
     <script type="text/javascript" src="../JavaScript/snake.js"></script>
+
   </head>
     
   <body onload="initGame()" onkeydown="enterKey(event)">
+
     <h1>Snake the game</h1>
+    <button onclick="tryAgain();">Try Again</button>
+
+    <button onclick="
+    var database = firebase.database();
+    var name = window.prompt('congrats, your score is '+snakeLength+'. Please input your name so we can add it to the leader board. ','...');
+    
+      console.log('added to database');
+      firebase.database().ref('scores/'+name).push({ points : snakeLength});
+    
+
+    //location.href = '../index.html';
+    ">Quit</button>
+
+    <h5 id="score">Highscore: 0 </h5>
     <div id="board"></div>
+      
   </body>
     
 </html>

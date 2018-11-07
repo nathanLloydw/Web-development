@@ -1,16 +1,16 @@
-	
+
 const board = [];
 const boardWidth = 26, boardHeight = 16;
 
 var snakeX;
 var snakeY;
 var snakeLength;
+var highScore = 2;
 var snakeDirection;
 
 function initGame() 
 {
    const boardElement = document.getElementById('board');
-
    for (var y = 0; y < boardHeight; ++y) 
    {
       var row = [];
@@ -69,6 +69,16 @@ function startGame()
    placeApple();
 }
 
+function tryAgain()
+{
+    location.href = '../HTML/snake.html';
+}
+
+function lost()
+{
+
+}
+
 function gameLoop() 
 {
 
@@ -84,15 +94,11 @@ function gameLoop()
    // Check for walls, and restart if we collide with any
    if (snakeX < 0 || snakeY < 0 || snakeX >= boardWidth || snakeY >= boardHeight) 
    {
-      window.prompt("congrats, your score is "+snakeLength+". Please input your name to add it to the leader board. ","bob marley");
-      startGame();
+       return;
    }
-
-   // Tail collision
-   if (board[snakeY][snakeX].snake > 0) 
+   else if (board[snakeY][snakeX].snake > 0) //tail collision
    {
-      window.prompt("congrats, your score is "+snakeLength+". Please input your name to add it to the leader board. ","bob marley");
-      startGame();
+       return;
    }
 
    // Collect apples
@@ -130,6 +136,15 @@ function gameLoop()
    }
    // This function manages the frame rate depending on the size of the snake
    setTimeout(gameLoop, 1000 / snakeLength);
+   checkScore();
+}
+function checkScore()
+{
+   if(snakeLength > highScore)
+   {
+       highScore = snakeLength;
+       score.innerText = "Highscore: "+highScore;
+   }
 }
 
 function enterKey(event) 
