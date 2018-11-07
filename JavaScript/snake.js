@@ -1,6 +1,6 @@
 	
 const board = [];
-const boardWidth = 30, boardHeight = 20;
+const boardWidth = 26, boardHeight = 16;
 
 var snakeX;
 var snakeY;
