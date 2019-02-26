@@ -1,3 +1,3 @@
 ## Web Development
 
-Any HTML, CSS, PHP, MySQL related code.
+Any HTML, CSS, PHP, MySQL and javascript related code.
