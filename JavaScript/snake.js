@@ -135,7 +135,7 @@ function gameLoop()
       }
    }
    // This function manages the frame rate depending on the size of the snake
-   setTimeout(gameLoop, 100 / snakeLength);
+   setTimeout(gameLoop, 1000 / snakeLength);
    checkScore();
 }
 function checkScore()
