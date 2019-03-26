@@ -45,7 +45,10 @@ window.addEventListener('mousemove',function(event)
 
 window.addEventListener('mousedown',function(event)
 {
+
     mouse.down = true;
+    
+    
 });
 
 window.addEventListener('mouseup',function(event)
@@ -156,36 +159,43 @@ function animate()
 {
     requestAnimationFrame(animate);
     c.clearRect(0,0,innerWidth,innerHeight);
-
-    for(x = 0;x < circles.length; x++)
+    for(x = 0; x < circles.length; x++)
     {
         circles[x].update();
+    }
+    if(circles.length > 1000)
+    {
         
-        If(mouse.down)
+        circles.splice(0,100);
+        
+    }
+
+    if(mouse.down)
+    {
+        console.log('mouse down');
+        //var color = "rgba(25, 255, 255, 1)";
+        var R = randomInt(0,255);
+        var G = randomInt(0,255);
+        var B = randomInt(0,255);
+        var O = 1;
+
+        for(var i = 1; i <= 5; i++)
         {
-           //var color = "rgba(25, 255, 255, 1)";
-           var R = randomInt(0,255);
-           var G = randomInt(0,255);
-           var B = randomInt(0,255);
-           var O = 1;
- 
-           for(var i = 1; i <= 50; i++)
-           {
-               var radius = randomInt(1,3);
-               var x = mouse.x + radius;
-               var y = mouse.y + radius;
-               var dx = randomInt(-5,5);
-               var dy = randomInt(-20,-10);
+            var radius = randomInt(1,3);
+            var x = mouse.x + radius;
+            var y = mouse.y + radius;
+            var dx = randomInt(-5,5);
+            var dy = randomInt(-20,-10);
+
+            var gravity = Math.random() >= 0.5;
+            var gravityForce = randomInt(1,2);
+            var gravityBounce = randomInt(1,8) / 10;
+            var gravityRoll = 0.1;
+
+            circles.push(new Circle(x,y,dx,dy,radius,R,G,B,O,true,gravityForce,gravityBounce,gravityRoll));
+     } 
+    }
     
-               var gravity = Math.random() >= 0.5;
-               var gravityForce = randomInt(1,2);
-               var gravityBounce = randomInt(1,8) / 10;
-               var gravityRoll = 0.1;
-   
-               circles.push(new Circle(x,y,dx,dy,radius,R,G,B,O,true,gravityForce,gravityBounce,gravityRoll));
-            } 
-        }
-    } 
 }
 
 animate();
