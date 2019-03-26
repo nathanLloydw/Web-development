@@ -51,9 +51,9 @@ window.addEventListener('mousedown',function(event)
     var B = randomInt(0,255);
     var O = 1;
  
-    for(var i = 1; i <= 15; i++)
+    for(var i = 1; i <= 50; i++)
     {
-        var radius = randomInt(2,5);
+        var radius = randomInt(1,3);
         var x = mouse.x + radius;
         var y = mouse.y + radius;
         var dx = randomInt(-5,5);
