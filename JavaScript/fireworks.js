@@ -34,7 +34,7 @@ var mouse =
 {
     x: undefined,
     y: undefined,
-     
+    down:undefined  
 }
 
 window.addEventListener('mousemove',function(event)
@@ -45,32 +45,12 @@ window.addEventListener('mousemove',function(event)
 
 window.addEventListener('mousedown',function(event)
 {
-    //var color = "rgba(25, 255, 255, 1)";
-    var R = randomInt(0,255);
-    var G = randomInt(0,255);
-    var B = randomInt(0,255);
-    var O = 1;
- 
-    for(var i = 1; i <= 50; i++)
-    {
-        var radius = randomInt(1,3);
-        var x = mouse.x + radius;
-        var y = mouse.y + radius;
-        var dx = randomInt(-5,5);
-        var dy = randomInt(-20,-10);
-    
-        var gravity = Math.random() >= 0.5;
-        var gravityForce = randomInt(1,2);
-        var gravityBounce = randomInt(1,8) / 10;
-        var gravityRoll = 0.1;
-   
-        circles.push(new Circle(x,y,dx,dy,radius,R,G,B,O,true,gravityForce,gravityBounce,gravityRoll));
-    }
+    mouse.down = true;
 });
 
 window.addEventListener('mouseup',function(event)
 {
-
+    mouse.down = false;
 });
 
 window.addEventListener('resize',function(event)
@@ -180,6 +160,31 @@ function animate()
     for(x = 0;x < circles.length; x++)
     {
         circles[x].update();
+        
+        If(mouse.down)
+        {
+           //var color = "rgba(25, 255, 255, 1)";
+           var R = randomInt(0,255);
+           var G = randomInt(0,255);
+           var B = randomInt(0,255);
+           var O = 1;
+ 
+           for(var i = 1; i <= 50; i++)
+           {
+               var radius = randomInt(1,3);
+               var x = mouse.x + radius;
+               var y = mouse.y + radius;
+               var dx = randomInt(-5,5);
+               var dy = randomInt(-20,-10);
+    
+               var gravity = Math.random() >= 0.5;
+               var gravityForce = randomInt(1,2);
+               var gravityBounce = randomInt(1,8) / 10;
+               var gravityRoll = 0.1;
+   
+               circles.push(new Circle(x,y,dx,dy,radius,R,G,B,O,true,gravityForce,gravityBounce,gravityRoll));
+            } 
+        }
     } 
 }
 
