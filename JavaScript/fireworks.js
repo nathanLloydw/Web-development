@@ -47,6 +47,28 @@ window.addEventListener('mousedown',function(event)
 {
 
     mouse.down = true;
+    console.log('mouse down');
+        //var color = "rgba(25, 255, 255, 1)";
+        var R = randomInt(0,255);
+        var G = randomInt(0,255);
+        var B = randomInt(0,255);
+        var O = 1;
+
+        for(var i = 1; i <= 5; i++)
+        {
+            var radius = randomInt(1,3);
+            var x = mouse.x + radius;
+            var y = mouse.y + radius;
+            var dx = randomInt(-5,5);
+            var dy = randomInt(-20,-10);
+
+            var gravity = Math.random() >= 0.5;
+            var gravityForce = randomInt(1,2);
+            var gravityBounce = randomInt(1,8) / 10;
+            var gravityRoll = 0.1;
+
+            circles.push(new Circle(x,y,dx,dy,radius,R,G,B,O,true,gravityForce,gravityBounce,gravityRoll));
+     } 
     
     
 });
@@ -193,7 +215,7 @@ function animate()
             var gravityRoll = 0.1;
 
             circles.push(new Circle(x,y,dx,dy,radius,R,G,B,O,true,gravityForce,gravityBounce,gravityRoll));
-     } 
+        } 
     }
     
 }
