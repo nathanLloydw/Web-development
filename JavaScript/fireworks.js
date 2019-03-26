@@ -32,9 +32,9 @@ c.stroke();
 
 var mouse = 
 {
-    x: 150,
-    y: 150,
-    down:false
+    x: undefined,
+    y: undefined,
+    down:undefined  
 }
 
 window.addEventListener('mousemove',function(event)
