@@ -66,6 +66,33 @@ window.addEventListener('mousedown',function(event)
     } 
 });
 
+window.addEventListener('touchstart',function(event)
+{
+    mouse.x = event.x;
+    mouse.y = event.y;
+    
+    var R = randomInt(0,255);
+    var G = randomInt(0,255);
+    var B = randomInt(0,255);
+    var O = 1;
+    
+ 
+    for(var i = 1; i <= 35; i++)
+    {
+        var radius = randomInt(1,3);
+        var x = mouse.x + radius;
+        var y = mouse.y + radius;
+        var dx = randomInt(-60,60) /10;
+        var dy = randomInt(-250,-150) / 10;
+        var gravity = true;
+        var gravityForce = randomInt(10,20) / 10;
+        var gravityBounce = randomInt(10,80) / 100;
+        var gravityRoll = 0.1;
+   
+        circles.push(new Circle(x,y,dx,dy,radius,R,G,B,O,gravity,gravityForce,gravityBounce,gravityRoll));
+    } 
+});
+
 window.addEventListener('mouseup',function(event)
 {
 
