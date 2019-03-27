@@ -85,8 +85,6 @@ function Circle(x,y,dx,dy,radius,R,G,B,O,gravity,force,bounce,roll)
     this.dx = dx;
     this.dy = dy;
     this.radius = radius;
-
-    console.log(this.x,this.y,this.dx,this.dy,this.radius);
     this.R = R;
     this.G = G;
     this.B = B;
