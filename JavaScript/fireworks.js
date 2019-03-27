@@ -57,12 +57,12 @@ window.addEventListener('mousedown',function(event)
         var y = mouse.y + radius;
         var dx = randomInt(-60,60) /10;
         var dy = randomInt(-250,-150) / 10;
-        //var gravity = Math.random() >= 0.5;
+        var gravity = true;
         var gravityForce = randomInt(10,20) / 10;
         var gravityBounce = randomInt(10,80) / 100;
-        var gravityRoll = 0.5;
+        var gravityRoll = 0.1;
    
-        circles.push(new Circle(x,y,dx,dy,radius,R,G,B,O,true,gravityForce,gravityBounce,gravityRoll));
+        circles.push(new Circle(x,y,dx,dy,radius,R,G,B,O,gravity,gravityForce,gravityBounce,gravityRoll));
     } 
 });
 
