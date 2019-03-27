@@ -14,68 +14,61 @@ function randomInt(min,max)
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-var canvas = document.querySelector('canvas');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-var c = canvas.getContext('2d');
-
-/*c.fillStyle = 'rgba(0,0,255,0.5)';
-c.fillRect(100,100,100,100);
-
-c.beginPath();
-c.moveTo(50,300);
-c.lineTo(300,300);
-c.lineTo(400,400);
-c.strokeStyle = "green";
-c.stroke();
-*/
+function sleep(milliseconds) 
+{
+    var start = new Date().getTime();
+    for (var i = 0; i < 1e7; i++) 
+    {
+        if ((new Date().getTime() - start) > milliseconds)
+        {
+            break;
+        }
+    }
+}
 
 var mouse = 
 {
     x: undefined,
-    y: undefined,
-    down:undefined  
+    y: undefined,   
 }
 
 window.addEventListener('mousemove',function(event)
 {
-    mouse.x = event.x;
-    mouse.y = event.y;
+    //mouse.x = event.x;
+    //mouse.y = event.y;
+   
 });
 
 window.addEventListener('mousedown',function(event)
 {
-
-    mouse.down = true;
-    console.log('mouse down');
-        //var color = "rgba(25, 255, 255, 1)";
-        var R = randomInt(0,255);
-        var G = randomInt(0,255);
-        var B = randomInt(0,255);
-        var O = 1;
-
-        for(var i = 1; i <= 5; i++)
-        {
-            var radius = randomInt(1,3);
-            var x = mouse.x + radius;
-            var y = mouse.y + radius;
-            var dx = randomInt(-5,5);
-            var dy = randomInt(-20,-10);
-
-            var gravity = Math.random() >= 0.5;
-            var gravityForce = randomInt(1,2);
-            var gravityBounce = randomInt(1,8) / 10;
-            var gravityRoll = 0.1;
-
-            circles.push(new Circle(x,y,dx,dy,radius,R,G,B,O,true,gravityForce,gravityBounce,gravityRoll));
-     } 
+    mouse.x = event.x;
+    mouse.y = event.y;
     
+    var R = randomInt(0,255);
+    var G = randomInt(0,255);
+    var B = randomInt(0,255);
+    var O = 1;
     
+ 
+    for(var i = 1; i <= 35; i++)
+    {
+        var radius = randomInt(1,3);
+        var x = mouse.x + radius;
+        var y = mouse.y + radius;
+        var dx = randomInt(-60,60) /10;
+        var dy = randomInt(-250,-150) / 10;
+        //var gravity = Math.random() >= 0.5;
+        var gravityForce = randomInt(10,20) / 10;
+        var gravityBounce = randomInt(10,80) / 100;
+        var gravityRoll = 0.5;
+   
+        circles.push(new Circle(x,y,dx,dy,radius,R,G,B,O,true,gravityForce,gravityBounce,gravityRoll));
+    } 
 });
 
 window.addEventListener('mouseup',function(event)
 {
-    mouse.down = false;
+
 });
 
 window.addEventListener('resize',function(event)
@@ -92,6 +85,8 @@ function Circle(x,y,dx,dy,radius,R,G,B,O,gravity,force,bounce,roll)
     this.dx = dx;
     this.dy = dy;
     this.radius = radius;
+
+    console.log(this.x,this.y,this.dx,this.dy,this.radius);
     this.R = R;
     this.G = G;
     this.B = B;
@@ -170,54 +165,34 @@ function Circle(x,y,dx,dy,radius,R,G,B,O,gravity,force,bounce,roll)
         this.x+= this.dx;
         this.y+= this.dy;
         this.draw();  
-        //this.O -= 0.02;
+        //this.O -= 0.01;
         
     }
     
 }
 
+var canvas = document.querySelector('canvas');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+var c = canvas.getContext('2d');
+
 var circles = [];
+
 function animate()
 {
     requestAnimationFrame(animate);
     c.clearRect(0,0,innerWidth,innerHeight);
-    for(x = 0; x < circles.length; x++)
+
+    for(x = 0;x < circles.length; x++)
     {
         circles[x].update();
-    }
+    } 
+    
+    
     if(circles.length > 1000)
     {
-        
-        circles.splice(0,100);
-        
+        circles.splice(0,100);    
     }
-
-    if(mouse.down)
-    {
-        console.log('mouse down');
-        //var color = "rgba(25, 255, 255, 1)";
-        var R = randomInt(0,255);
-        var G = randomInt(0,255);
-        var B = randomInt(0,255);
-        var O = 1;
-
-        for(var i = 1; i <= 5; i++)
-        {
-            var radius = randomInt(1,3);
-            var x = mouse.x + radius;
-            var y = mouse.y + radius;
-            var dx = randomInt(-5,5);
-            var dy = randomInt(-20,-10);
-
-            var gravity = Math.random() >= 0.5;
-            var gravityForce = randomInt(1,2);
-            var gravityBounce = randomInt(1,8) / 10;
-            var gravityRoll = 0.1;
-
-            circles.push(new Circle(x,y,dx,dy,radius,R,G,B,O,true,gravityForce,gravityBounce,gravityRoll));
-        } 
-    }
-    
 }
 
 animate();
