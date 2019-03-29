@@ -208,6 +208,8 @@ function animate()
     requestAnimationFrame(animate);
     c.clearRect(0,0,innerWidth,innerHeight);
 
+    c.font = "30px Arial";
+    c.fillText("click here", innerWidth/2, innerHeight/2 - 100);
     for(x = 0;x < circles.length; x++)
     {
         circles[x].update();
