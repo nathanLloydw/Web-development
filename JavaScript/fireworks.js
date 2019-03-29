@@ -86,7 +86,7 @@ window.addEventListener('touchstart',function(event)
         var dy = randomInt(-250,-150) / 10;
         var gravity = true;
         var gravityForce = randomInt(10,20) / 10;
-        var gravityBounce = randomInt(10,80) / 100;
+        var gravityBounce = randomInt(10,60) / 100;
         var gravityRoll = 0.1;
    
         circles.push(new Circle(x,y,dx,dy,radius,R,G,B,O,gravity,gravityForce,gravityBounce,gravityRoll));
