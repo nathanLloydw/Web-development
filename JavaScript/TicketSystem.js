@@ -18,7 +18,7 @@ window.onload = function(){
         header.innerHTML = "ticket number";
         ticket.innerHTML = randomTicket;
         
-        waitTime.style.innerHTML = "your wait time will be roughly "+Math.floor((Math.random()*10))*5+" and "+Math.floor((Math.random()*10))*5+" hours";
+        waitTime.innerHTML = "your wait time will be roughly "+Math.floor((Math.random()*10))*5+" and "+Math.floor((Math.random()*10))*5+" hours";
     }
     
     document.getElementById("button").onclick = click;
