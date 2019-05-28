@@ -18,6 +18,8 @@ window.onload = function(){
         header.innerHTML = "ticket number";
         ticket.style.innerHTML = randomTicket;
         
+        Math.floor((Math.random()*10))*5
+        waitTime.style.innerHTML = "your wait time will be roughly "+Math.floor((Math.random()*10))*5+" and "+Math.floor((Math.random()*10))*5+" hours";
     }
     
     document.getElementById("button").onclick = click;
