@@ -11,6 +11,12 @@ form
     padding-top: 25px;
     font-family: Helvetica, Arial, Helvetica, sans-serif;
 }
+
+#ticket
+{
+   font-size:32px;  
+}
+
 button 
 {
   background-color: #2d2c2c; 
