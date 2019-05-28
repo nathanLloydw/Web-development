@@ -1,3 +1,5 @@
+window.onload = function(){ 
+    // your code 
 
 function click() 
 {
@@ -6,3 +8,6 @@ function click()
 
 document.getElementById("button").onclick = click;
 click();
+
+    
+};
