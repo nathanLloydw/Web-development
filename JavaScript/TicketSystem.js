@@ -8,10 +8,13 @@ window.onload = function(){
         var header = document.getElementById("header");
         var ticket = document.getElementById("ticket");
         
+        var min=18; 
+        var max=125;  
+        var random =Math.floor(Math.random() * (+max - +min)) + +min; 
         
         form.style.display = "none";
-        header.innerHTML = "ticket number :";
-        ticket.innerHTML = "3";
+        header.innerHTML = "ticket number:";
+        ticket.innerHTML = random;
     }
     
     document.getElementById("button").onclick = click;
