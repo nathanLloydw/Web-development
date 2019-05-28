@@ -15,8 +15,8 @@ window.onload = function(){
         
         form.style.display = "none";
         header.innerHTML = "ticket number";
-        ticket.style.
-        ticket.innerHTML = randomTicket;
+        ticket.style.innerHTML = randomTicket;
+        
     }
     
     document.getElementById("button").onclick = click;
