@@ -8,4 +8,6 @@ window.onload = function(){
         form.style.display = "none";
     }
     
+    document.getElementById("button").onclick = click;
+    
 };
