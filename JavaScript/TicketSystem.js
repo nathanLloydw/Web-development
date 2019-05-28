@@ -18,10 +18,10 @@ window.onload = function(){
         header.innerHTML = "ticket number";
         ticket.innerHTML = randomTicket;
         
-        var start = Math.floor((Math.random()*10))*5;
-        var end = start + Math.floor((Math.random()*10))*5;
+        var hours = Math.floor((Math.random()*10))*5;
+        var mins = start + Math.floor((Math.random()*10))*5;
         
-        waitTime.innerHTML = "your wait time will be roughly "+start+" to "+end+" hours";
+        waitTime.innerHTML = "your wait time will be roughly "+hours+" hours  and"+mins+" mins";
     }
     
     document.getElementById("button").onclick = click;
