@@ -17,6 +17,11 @@ form
    font-size:48px;  
 }
 
+#wait
+{
+    font-size:22px;  
+}
+
 button 
 {
   background-color: #2d2c2c; 
