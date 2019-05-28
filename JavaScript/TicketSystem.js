@@ -26,7 +26,7 @@ window.onload = function(){
             mins = mins - 40;
         }
         
-        waitTime.innerHTML = "your wait time will be roughly "+hours+" hours  and"+mins+" mins";
+        waitTime.innerHTML = "your wait time will be roughly "+hours+" hours  and "+mins+" mins";
     }
     
     document.getElementById("button").onclick = click;
