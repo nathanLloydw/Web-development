@@ -1,5 +1,5 @@
 
-document.getElementByClass("clickMe").onclick = function(){console.log("click")};
+document.getElementById("Button").onclick = function(){console.log("click")};
 
 function click() 
 {
