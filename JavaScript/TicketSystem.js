@@ -13,7 +13,8 @@ window.onload = function(){
         var random =Math.floor(Math.random() * (+max - +min)) + +min; 
         
         form.style.display = "none";
-        header.innerHTML = "ticket number:";
+        header.innerHTML = "ticket number";
+        ticket.style.
         ticket.innerHTML = random;
     }
     
