@@ -11,7 +11,7 @@ window.onload = function(){
         
         form.style.display = "none";
         header.innerHTML = "ticket number :";
-        ticket..innerHTML = "3";
+        ticket.innerHTML = "3";
     }
     
     document.getElementById("button").onclick = click;
