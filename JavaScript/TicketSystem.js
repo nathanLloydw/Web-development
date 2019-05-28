@@ -16,7 +16,7 @@ window.onload = function(){
         
         form.style.display = "none";
         header.innerHTML = "ticket number";
-        ticket.style.innerHTML = randomTicket;
+        ticket.innerHTML = randomTicket;
         
         waitTime.style.innerHTML = "your wait time will be roughly "+Math.floor((Math.random()*10))*5+" and "+Math.floor((Math.random()*10))*5+" hours";
     }
