@@ -7,6 +7,7 @@ window.onload = function(){
         var form = document.getElementById("form");
         var header = document.getElementById("header");
         var ticket = document.getElementById("ticket");
+        var waitTime = document.getElementById("wait");
         
         var min=18; 
         var max=125;  
