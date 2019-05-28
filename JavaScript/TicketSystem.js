@@ -10,12 +10,13 @@ window.onload = function(){
         
         var min=18; 
         var max=125;  
-        var random =Math.floor(Math.random() * (+max - +min)) + +min; 
+        
+        var randomTicket =Math.floor(Math.random() * (+max - +min)) + +min; 
         
         form.style.display = "none";
         header.innerHTML = "ticket number";
         ticket.style.
-        ticket.innerHTML = random;
+        ticket.innerHTML = randomTicket;
     }
     
     document.getElementById("button").onclick = click;
