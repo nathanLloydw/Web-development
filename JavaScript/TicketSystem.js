@@ -1,5 +1,5 @@
 
-document.getElementById("clickMe").onclick = click;
+document.getElementById("clickMe").onclick = function(){console.log("click")};
 
 function click() 
 {
