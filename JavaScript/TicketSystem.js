@@ -18,8 +18,13 @@ window.onload = function(){
         header.innerHTML = "ticket number";
         ticket.innerHTML = randomTicket;
         
-        var hours = Math.floor((Math.random()*10))*5;
-        var mins = start + Math.floor((Math.random()*10))*5;
+        var hours = Math.floor((Math.random()*10));
+        var mins = Math.floor((Math.random()*10));
+        
+        if(mins > 60)
+        {
+            mins = mins - 40;
+        }
         
         waitTime.innerHTML = "your wait time will be roughly "+hours+" hours  and"+mins+" mins";
     }
