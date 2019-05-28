@@ -18,7 +18,7 @@ window.onload = function(){
         header.innerHTML = "ticket number";
         ticket.innerHTML = randomTicket;
         
-        var hours = Math.floor(Math.random() * (+100 - +1)) + +1; 
+        var hours = Math.floor(Math.random() * (+24 - +1)) + +1; 
         var mins = Math.floor(Math.random() * (+100 - +1)) + +1; 
         
         if(mins > 60)
