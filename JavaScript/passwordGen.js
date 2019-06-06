@@ -14,6 +14,7 @@ window.addEventListener('mousedown',function(event)
 {
     mouse.x = event.x;
     mouse.y = event.y;
+    console.log(mouse.x," ",mouse.y);
 });
 
 window.addEventListener('mouseup',function(event)
@@ -23,6 +24,6 @@ window.addEventListener('mouseup',function(event)
 
 });
 
-console.log(mouse.x," ",mouse.y);
+
 
 scroller = document.getElementById("scroller_item");
