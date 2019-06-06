@@ -36,7 +36,8 @@ window.addEventListener('mouseup',function(event)
 
 });
 
-scroller = document.getElementById("scroller_item");
+ scroller = document.getElementById("scroller_item");
+ var pos = scroller.getBoundingClientRect();
  var scroller_x = scroller.offsetLeft;
  var scroller_y = scroller.offsetTop;
 
@@ -44,6 +45,6 @@ while(true)
 {
    sleep(10)
    console.log("mouse: ",mouse.x," ",mouse.y);
-   console.log("scroller: ",scroller_x," ",scroller_y);
+   console.log("scroller: ",pos.top," ",pos.right," ",pos.bottom," ",pos.left);
 }
 
