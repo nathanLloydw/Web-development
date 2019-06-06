@@ -37,12 +37,10 @@ window.addEventListener('mouseup',function(event)
 });
 
  var scroller = document.getElementById("scroller_item");
- var pos = scroller.getBoundingClientRect();
 
 while(true)
 {
    sleep(10)
    console.log("mouse: ",mouse.x," ",mouse.y);
-   console.log("scroller: ",pos.top," ",pos.right," ",pos.bottom," ",pos.left);
 }
 
