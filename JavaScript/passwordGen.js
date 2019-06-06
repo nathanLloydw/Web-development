@@ -40,7 +40,7 @@ window.addEventListener('mouseup',function(event)
 
 while(true)
 {
-   sleep(10)
+   sleep(1)
    console.log("mouse: ",mouse.x," ",mouse.y);
 }
 
