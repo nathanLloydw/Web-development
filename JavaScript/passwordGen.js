@@ -1,17 +1,22 @@
 
 dragElement(document.getElementById("scroller_item"));
 
-function dragElement(elmnt) {
+function dragElement(elmnt) 
+{
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById(elmnt.id + "header")) {
+  if (document.getElementById(elmnt.id)) 
+  {
     // if present, the header is where you move the DIV from:
-    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-  } else {
+    document.getElementById(elmnt.id).onmousedown = dragMouseDown;
+  } 
+  else 
+  {
     // otherwise, move the DIV from anywhere inside the DIV: 
     elmnt.onmousedown = dragMouseDown;
   }
 
-  function dragMouseDown(e) {
+  function dragMouseDown(e) 
+  {
     e = e || window.event;
     e.preventDefault();
     // get the mouse cursor position at startup:
@@ -22,7 +27,8 @@ function dragElement(elmnt) {
     document.onmousemove = elementDrag;
   }
 
-  function elementDrag(e) {
+  function elementDrag(e) 
+  {
     e = e || window.event;
     e.preventDefault();
     // calculate the new cursor position:
@@ -35,7 +41,8 @@ function dragElement(elmnt) {
     elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
   }
 
-  function closeDragElement() {
+  function closeDragElement() 
+  {
     // stop moving when mouse button is released:
     document.onmouseup = null;
     document.onmousemove = null;
