@@ -36,7 +36,7 @@ window.addEventListener('mouseup',function(event)
 
 });
 
- scroller = document.getElementById("scroller_item");
+ var scroller = document.getElementById("scroller_item");
  var pos = scroller.getBoundingClientRect();
 
 while(true)
