@@ -38,8 +38,6 @@ window.addEventListener('mouseup',function(event)
 
  scroller = document.getElementById("scroller_item");
  var pos = scroller.getBoundingClientRect();
- var scroller_x = scroller.offsetLeft;
- var scroller_y = scroller.offsetTop;
 
 while(true)
 {
