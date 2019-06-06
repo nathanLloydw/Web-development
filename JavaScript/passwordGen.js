@@ -38,9 +38,4 @@ window.addEventListener('mouseup',function(event)
 
  var scroller = document.getElementById("scroller_item");
 
-while(true)
-{
-   sleep(1000)
-   console.log("mouse: ",mouse.x," ",mouse.y);
-}
 
