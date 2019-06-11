@@ -5,6 +5,8 @@ window.onload = function()
      var password_symbols = document.getElementById('password_symbols');
 
      password_length.innerHTML = "12";
+     password_numbers.innerHTML = "13";
+     password_symbols.innerHTML = "14";
 
 
 }
