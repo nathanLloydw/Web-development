@@ -11,6 +11,13 @@ window.onload = function()
      password_length.innerHTML = "12";
      password_numbers.innerHTML = "13";
      password_symbols.innerHTML = "14";
+     
+     while(true)
+     {
+          password_length.innerHTML = slider_length.value;
+          password_numbers.innerHTML = slider_numbers.value;
+          password_symbols.innerHTML = slider_symbols.value;
+     }
 
 
 }
