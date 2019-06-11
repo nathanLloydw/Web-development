@@ -12,10 +12,10 @@ function update()
     
     switch(slider_length.value)
     {
-     case '6': password.innderHTML = words6[Math.floor(Math.random() * myArray.length)];
-     case '7': password.innderHTML = words7[Math.floor(Math.random() * myArray.length)];
-     case '8': password.innderHTML = words8[Math.floor(Math.random() * myArray.length)];
-     case '9': password.innderHTML = words9[Math.floor(Math.random() * myArray.length)];
+     case '6': password.innderHTML = words6[Math.floor(Math.random() * words6.length)];
+     case '7': password.innderHTML = words7[Math.floor(Math.random() * words7.length)];
+     case '8': password.innderHTML = words8[Math.floor(Math.random() * words8.length)];
+     case '9': password.innderHTML = words9[Math.floor(Math.random() * words9.length)];
      case '10': password.innderHTML = "test";
      case '11': password.innderHTML = "test";
      case '12': password.innderHTML = "test";
