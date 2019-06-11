@@ -11,6 +11,8 @@ function update()
     password_numbers.innerHTML = slider_numbers.value
     password_symbols.innerHTML = slider_symbols.value;
     
+    password.innderHTML = "test";
+    
     switch(slider_length.value)
     {
      case '6': password.innderHTML = words6[Math.floor(Math.random() * words6.length)];
