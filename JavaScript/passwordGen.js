@@ -1,3 +1,8 @@
+function update()
+{
+    console.log('updating...');    
+}
+
 window.onload = function()
 { 
      var password_length = document.getElementById('password_length');
