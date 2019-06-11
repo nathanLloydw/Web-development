@@ -13,6 +13,8 @@ function update()
 
 window.onload = function()
 { 
+     var randomWords = require('random-words');
+     console.log(randomWords());
      var password_length = document.getElementById('password_length');
      var password_numbers = document.getElementById('password_numbers');
      var password_symbols = document.getElementById('password_symbols');
