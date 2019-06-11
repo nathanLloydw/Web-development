@@ -14,19 +14,19 @@ function update()
     console.log(slider_length.value);    
     switch(slider_length.value)
     {
-     case '6': password.innerHTML = words6[Math.floor(Math.random() * words6.length)];
-     case '7': password.innerHTML = words7[Math.floor(Math.random() * words7.length)];
-     case '8': password.innerHTML = words8[Math.floor(Math.random() * words8.length)];
-     case '9': password.innerHTML = words9[Math.floor(Math.random() * words9.length)];
-     case '10': password.innerHTML = "test10";
-     case '11': password.innerHTML = "test11";
-     case '12': password.innerHTML = "test12";
-     case '13': password.innerHTML = "test13";
-     case '14': password.innerHTML = "test14";
-     case '15': password.innerHTML = "test15";
-     case '16': password.innerHTML = "test16";
-     case '17': password.innerHTML = "test17";
-     case '18': password.innerHTML = "test18";
+     case '6': password.innerHTML = words6[Math.floor(Math.random() * words6.length)];break;
+     case '7': password.innerHTML = words7[Math.floor(Math.random() * words7.length)];break;
+     case '8': password.innerHTML = words8[Math.floor(Math.random() * words8.length)];break;
+     case '9': password.innerHTML = words9[Math.floor(Math.random() * words9.length)];break;
+     case '10': password.innerHTML = "test10";break;
+     case '11': password.innerHTML = "test11";break;
+     case '12': password.innerHTML = "test12";break;
+     case '13': password.innerHTML = "test13";break;
+     case '14': password.innerHTML = "test14";break;
+     case '15': password.innerHTML = "test15";break;
+     case '16': password.innerHTML = "test16";break;
+     case '17': password.innerHTML = "test17";break;
+     case '18': password.innerHTML = "test18";break;
     }
 }
 
