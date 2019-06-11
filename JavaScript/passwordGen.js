@@ -23,10 +23,10 @@ function update()
      case '12': password.innerHTML = words3[Math.floor(Math.random() * words3.length)] + words9[Math.floor(Math.random() * words9.length)];break;
      case '13': password.innerHTML = words4[Math.floor(Math.random() * words4.length)] + words9[Math.floor(Math.random() * words9.length)];break;
      case '14': password.innerHTML = words6[Math.floor(Math.random() * words6.length)] + words8[Math.floor(Math.random() * words8.length)];break;
-     case '15': password.innerHTML = words4[Math.floor(Math.random() * words4.length)]+ words1[Math.floor(Math.random() * words1.length)] + words8[Math.floor(Math.random() * words9.length)];break;
-     case '16': password.innerHTML = words7[Math.floor(Math.random() * words7.length)]+ words1[Math.floor(Math.random() * words1.length)] + words8[Math.floor(Math.random() * words5.length)];break;
-     case '17': password.innerHTML = words6[Math.floor(Math.random() * words6.length)]+ words1[Math.floor(Math.random() * words1.length)] + words8[Math.floor(Math.random() * words4.length)];break;
-     case '18': password.innerHTML = words8[Math.floor(Math.random() * words8.length)]+ words1[Math.floor(Math.random() * words1.length)] + words8[Math.floor(Math.random() * words3.length)];break;
+     case '15': password.innerHTML = words5[Math.floor(Math.random() * words5.length)]+ words2[Math.floor(Math.random() * words2.length)] + words8[Math.floor(Math.random() * words9.length)];break;
+     case '16': password.innerHTML = words6[Math.floor(Math.random() * words6.length)]+ words2[Math.floor(Math.random() * words2.length)] + words8[Math.floor(Math.random() * words5.length)];break;
+     case '17': password.innerHTML = words6[Math.floor(Math.random() * words6.length)]+ words2[Math.floor(Math.random() * words2.length)] + words8[Math.floor(Math.random() * words4.length)];break;
+     case '18': password.innerHTML = words8[Math.floor(Math.random() * words8.length)]+ words2[Math.floor(Math.random() * words2.length)] + words8[Math.floor(Math.random() * words3.length)];break;
     }
 }
 
