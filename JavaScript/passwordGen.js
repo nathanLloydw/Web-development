@@ -1,19 +1,6 @@
 
 function update()
 {
-    var password = document.getElementById('password');
-
-    words1=['I','A'];
-    words2=['to','am','of','in','it','is','be','as','at','so','we','be'];
-    words3=['are','can','sad','bat','the','for','cat','dog','you','her','him','was','man'];
-    words4=['that','will','come','dick','hate','like','from','look','said','were','many','each','long','twat','fuck','yeah'];
-    words5=['bitch','twats','happy','hello','laugh','learn','drive','drove','broke','spoke','eager','guide','alive'];
-    words6=['purple','orange','family','people','Africa','monkey','Monday','office','sister','Austin','turtle','pirate','secret'];
-    words7=['perfect','pumpkin','America','freedom','hundred','silence','someone','science','revenge','musical','dancing','penguin','sixteen'];
-    words8=['Thursday','darkness','birthday','mountain','feminine','calendar','bullying','marriage','American','strength','champion','football','treasure'];
-    words9=['invisible','knowledge','community','irregular','secretary','celebrate','Halloween','Australia','pineapple','crocodile','pollution','ambulance','Christian'];
-
-    
     console.log('updating...');    
     
     var slider_length = document.getElementById('slider_length');
@@ -44,9 +31,20 @@ function update()
 
 window.onload = function()
 { 
-     
+    var password_length = document.getElementById('password_length');
+    var password_numbers = document.getElementById('password_numbers');
+    var password_symbols = document.getElementById('password_symbols');
     
-     var password_length = document.getElementById('password_length');
-     var password_numbers = document.getElementById('password_numbers');
-     var password_symbols = document.getElementById('password_symbols');
+    var password = document.getElementById('password');
+
+    words1=['I','A'];
+    words2=['to','am','of','in','it','is','be','as','at','so','we','be'];
+    words3=['are','can','sad','bat','the','for','cat','dog','you','her','him','was','man'];
+    words4=['that','will','come','dick','hate','like','from','look','said','were','many','each','long','twat','fuck','yeah'];
+    words5=['bitch','twats','happy','hello','laugh','learn','drive','drove','broke','spoke','eager','guide','alive'];
+    words6=['purple','orange','family','people','Africa','monkey','Monday','office','sister','Austin','turtle','pirate','secret'];
+    words7=['perfect','pumpkin','America','freedom','hundred','silence','someone','science','revenge','musical','dancing','penguin','sixteen'];
+    words8=['Thursday','darkness','birthday','mountain','feminine','calendar','bullying','marriage','American','strength','champion','football','treasure'];
+    words9=['invisible','knowledge','community','irregular','secretary','celebrate','Halloween','Australia','pineapple','crocodile','pollution','ambulance','Christian'];
 }
+
