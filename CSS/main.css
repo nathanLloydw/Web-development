@@ -106,10 +106,6 @@ header .profile-image
   border-bottom: 4px solid #ccc;
   border-radius: 6px;
 }
-.card:hover 
-{
-  border-color: maroon;
-}
 
 ul.skills 
 {
