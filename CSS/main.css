@@ -81,10 +81,7 @@ header .profile-image
   border: 3px solid white;
   transition: all .5s;
 }
-header .profile-image:hover 
-{
-  transform: scale(1.5) rotate(1080deg);
-}
+
 .tag 
 {
   background-color: midnightblue;
