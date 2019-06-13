@@ -150,6 +150,7 @@ ul.skills
 #footer ul 
 {
   list-style-type: none;
+  vertical-align: middle;
   margin: auto;
   padding: 0;
 }
