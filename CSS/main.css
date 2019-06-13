@@ -67,7 +67,7 @@ a:hover
   color: white
 }
 
-#header 
+header 
 {
   text-align: center;
   background: url(https://www.iliketowastemytime.com/sites/default/files/night-sky-hd-wallpaper.jpg) no-repeat top center ;
@@ -76,7 +76,7 @@ a:hover
   padding-top: 60px;
 }
 
-#header .profile-image 
+header .profile-image 
 {
   margin-top: 50px;
   width: 150px;
