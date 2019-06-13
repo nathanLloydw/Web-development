@@ -204,5 +204,13 @@ ul.skills
     max-width: 1200px;
     margin: 40px auto;
  }
+  
+  #footer ul
+  {
+     list-style-type: none;
+     vertical-align: middle;
+     margin: auto;
+     padding: 0;
+  }
 }
 
