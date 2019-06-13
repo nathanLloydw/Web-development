@@ -80,10 +80,10 @@ header
 header .profile-image 
 {
   margin-top: 50px;
-  width: 150px;
-  height: 150px;
+  width: 225px;
+  height: 225px;
   border-radius: 50%;
-  border: 3px solid #0a0f33;
+  border: 3px solid #2180e4;
   
 }
 
