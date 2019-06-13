@@ -67,7 +67,7 @@ a:hover
   color: white
 }
 
-header 
+#header 
 {
   text-align: center;
   background: url(https://www.iliketowastemytime.com/sites/default/files/night-sky-hd-wallpaper.jpg) no-repeat top center ;
@@ -76,7 +76,7 @@ header
   padding-top: 60px;
 }
 
-header .profile-image 
+#header .profile-image 
 {
   margin-top: 50px;
   width: 150px;
@@ -134,27 +134,27 @@ ul.skills
   background: darkslateblue;
 }
 
-footer 
+#footer 
 {
   width: 100%;
   min-height: 30px;
 }
 
-footer .copyright 
+#footer .copyright 
 {
   top: -8px;
   font-size: .75em;
   text-align: center;
 }
 
-footer ul 
+#footer ul 
 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-footer ul li 
+#footer ul li 
 {
   display: inline-block;
   text-align: center;
@@ -197,7 +197,7 @@ footer ul li
     line-height: 1.6em;
  }
 
- footer 
+ #footer 
  {
     font-size: 1.3em;
     max-width: 1200px;
