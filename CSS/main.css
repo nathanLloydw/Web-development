@@ -1,5 +1,6 @@
 /* Global Layout Set-up */
-* { 
+* 
+{ 
   box-sizing: border-box;
 }
   
@@ -12,13 +13,14 @@ body
   color: #222;
   background: #ffffff;
 }
-/* Link Styles */
 
+/* Link Styles */
 a 
 {
   text-decoration: none;
   color: steelblue;
 }
+
 a:hover 
 {
   color: darkslateblue;
@@ -34,6 +36,7 @@ a:hover
   position: fixed;
   text-align: center;
 }
+
 .nav 
 {
   display: flex;
@@ -43,18 +46,22 @@ a:hover
   margin: 0 auto;
   padding: 0;
 }
+
 .nav .name 
 {
   display: none;
 }
+
 .nav li 
 {
   padding: 5px 10px 10px 10px;
 }
+
 .nav a 
 {
   transition: all .5s;
 }
+
 .nav a:hover 
 {
   color: white
@@ -67,11 +74,9 @@ header
   background-size: cover;
   overflow: hidden;
   padding-top: 60px;
-}
-header 
-{
   line-height: 1.5;
 }
+
 header .profile-image 
 {
   margin-top: 50px;
@@ -91,11 +96,13 @@ header .profile-image
   display: table;
   margin: 10px auto;
 } 
+
 .location 
 {
   background-color: midnightblue;
   color: white;
 }
+
 .card 
 {
   margin: 30px;
@@ -156,48 +163,46 @@ footer ul li
 
 @media screen and (min-width: 720px) 
 {
-  
-  .flex 
+ .flex 
  {
       display: flex;
       max-width: 1200px;
       justify-content: space-around;
       margin: 0 auto;
-  }
+ }
 
-  header 
+ header 
  {
     min-height: 450px;
-  }
+ }
 
-  .nav 
+ .nav 
  {
     max-width: 1200px;
-  }
+ }
 
-  .nav .name 
+ .nav .name 
  {
     display: block;
     margin-right: auto;
     color: white;
-  }
+ }
 
-  main 
+ main 
  {
     padding-top: 50px;
-  }
+ }
 
-  main p 
+ main p 
  {
     line-height: 1.6em;
-  }
+ }
 
-  footer 
+ footer 
  {
     font-size: 1.3em;
     max-width: 1200px;
     margin: 40px auto;
-  }
-
+ }
 }
 
