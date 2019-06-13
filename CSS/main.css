@@ -17,6 +17,7 @@ body
 /* Link Styles */
 a 
 {
+  transition: all .5s;
   text-decoration: none;
   color: steelblue;
 }
