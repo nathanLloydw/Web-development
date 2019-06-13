@@ -145,6 +145,7 @@ footer .copyright
 {
   top: -8px;
   font-size: .75em;
+  text-align: center;
 }
 
 footer ul 
@@ -157,6 +158,7 @@ footer ul
 footer ul li 
 {
   display: inline-block;
+  text-align: center;
 }
 
 @media screen and (min-width: 720px) 
