@@ -83,8 +83,8 @@ header .profile-image
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 3px solid white;
-  transition: all .5s;
+  border: 3px solid #0a0f33;
+  
 }
 
 .tag 
