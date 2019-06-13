@@ -27,6 +27,11 @@ a:hover
   color: #021f3d;
 }
 
+.nav a:hover
+{
+  color: white;
+}
+
 /* Section Styles */
 .main-nav 
 {
