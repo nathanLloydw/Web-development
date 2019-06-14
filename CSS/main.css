@@ -19,7 +19,7 @@ a
 {
   transition: all .5s;
   text-decoration: none;
-  color: #029bd5;
+  color: #2bade2;
 }
 
 a:hover 
@@ -71,7 +71,7 @@ a:hover
 header 
 {
   text-align: center;
-  background: url(https://raw.githubusercontent.com/nathanLloydw/Web-development/master/resources/pokemonBackgroundFinal.png) no-repeat top center ;
+  background: url(https://raw.githubusercontent.com/nathanLloydw/Web-development/master/resources/pokemonBackgroundFinal.png) no-repeat bottom right ;
   background-size: cover;
   overflow: hidden;
   padding-top: 60px;
