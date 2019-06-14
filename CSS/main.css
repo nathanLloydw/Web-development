@@ -86,12 +86,21 @@ header .profile-image
 
 .tag 
 {
-  color: white;
+  color: #f3f6e2;
   border-radius: 5px;
   display: table;
   margin: 10px auto;
-  text-shadow: white 0px 0px 10px;
+  text-shadow: black 0px 0px 10px;
 } 
+
+h1.tag.name 
+{
+    font-size: 38px;
+}
+p.tag.location 
+{
+    font-size: 20px;
+}
 
 .card 
 {
