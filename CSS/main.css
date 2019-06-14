@@ -90,6 +90,7 @@ header .profile-image
   border-radius: 5px;
   display: table;
   margin: 10px auto;
+  text-shadow: white 0px 0px 10px;
 } 
 
 .card 
