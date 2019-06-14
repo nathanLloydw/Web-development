@@ -178,12 +178,17 @@ footer ul li
    background-image:linear-gradient(#358242,#1c4022,#232323);
  }
   
- .flex:nth-child(odd)
+.flex:nth-child(odd)
  {
    background:#232323;
+   clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
  }
-
-
+  
+ .flex:nth-child(3)
+ {
+   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+   color:green;
+ }
 
  header 
  {
