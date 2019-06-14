@@ -32,7 +32,10 @@ a:hover
   color: white;
 }
 
-
+.card p a:hover
+{
+   font-color:black; 
+}
 /* Section Styles */
 .main-nav 
 {
