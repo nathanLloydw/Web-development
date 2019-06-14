@@ -16,7 +16,6 @@ body
   text-align: center;
   font-family: sans-serif;
   color: #222;
-  background-image:linear-gradient(#358242,#358242,#ffffff);
 }
 
 /* Link Styles */
@@ -174,6 +173,11 @@ footer ul li
       max-width: 1200px;
       justify-content: space-around;
       margin: 0 auto;
+ }
+  
+ .flex:first-of-type
+ {
+   background-image:linear-gradient(#358242,#358242,#ffffff);
  }
 
  header 
