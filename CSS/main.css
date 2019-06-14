@@ -115,27 +115,6 @@ p.tag.location
   width:80%;
 }
 
-ul.skills 
-{
-  padding: 0;
-  text-align: center;
-}
-
-.skills li
-{
-  border-radius: 6px;
-  display: inline-block;
-  background: #029bd5;
-  color: white;
-  padding: 5px 10px;
-  margin: 2px;
-}
-
-.skills li:nth-child(odd) 
-{
-  background: #021f3d;
-}
-
 footer 
 {
   background: #2f2f2f;
