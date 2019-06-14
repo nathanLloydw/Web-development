@@ -71,6 +71,7 @@ a:hover
 header 
 {
   text-align: center;
+  padding-top:60px;
   background: url(https://raw.githubusercontent.com/nathanLloydw/Web-development/master/resources/pokemonBackgroundFinal.png) no-repeat bottom right ;
   background-size: cover;
   overflow: hidden;
