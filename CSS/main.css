@@ -6,7 +6,7 @@
 
 html
 {
-  background: #464343;
+  background: #2f2f2f;
 }
   
 body 
@@ -16,7 +16,7 @@ body
   text-align: center;
   font-family: sans-serif;
   color: #222;
-  background: #ffffff;
+  background-image:linear-gradient(#358242,#358242,#ffffff);
 }
 
 /* Link Styles */
@@ -32,11 +32,12 @@ a:hover
   color: white;
 }
 
+
 /* Section Styles */
 .main-nav 
 {
   width: 100%;
-  background: #464343;
+  background: #2f2f2f;
   min-height: 30px;
   padding: 10px;
   position: fixed;
@@ -136,7 +137,7 @@ ul.skills
 
 footer 
 {
-  background: #464343;
+  background: #2f2f2f;
   width: 100%;
   min-height: 30px;
 }
@@ -146,6 +147,7 @@ footer .copyright
   top: -8px;
   font-size: .75em;
   text-align: center;
+  color:#f3f6e2;
 }
 
 footer ul 
