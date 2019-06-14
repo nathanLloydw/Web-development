@@ -178,7 +178,7 @@ footer ul li
    background-image:linear-gradient(#358242,#1c4022,#232323);
  }
   
- .flex
+ .flex:nth-child(odd)
  {
    background:#232323;
  }
