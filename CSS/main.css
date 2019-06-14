@@ -16,7 +16,7 @@ body
   padding: 0;
   text-align: center;
   font-family: sans-serif;
-  color: #222;
+  color: white;
 }
 
 /* Link Styles */
@@ -139,7 +139,6 @@ footer ul li
       display: flex;
       justify-content: space-around;
       margin: 0 auto;
-      font-color:white;
  }
 
  .flex:first-of-type
