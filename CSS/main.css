@@ -178,6 +178,16 @@ footer ul li
  {
    background-image:linear-gradient(#358242,#1c4022,#2f2f2f);
  }
+  
+ .flex:nth-of-type(3)
+ {
+   background:#a0a0a0;
+ }
+ .flex:nth-of-type(4)
+ {
+   background:#585858;
+ }
+
 
  header 
  {
