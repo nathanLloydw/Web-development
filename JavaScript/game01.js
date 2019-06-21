@@ -2,10 +2,12 @@ var context;
 
 function init()
 {
-    context = myCanvas.getContext('2d');
-    context.beginPath();
-    context.fillStyle="#0000ff";
+    canvas = myCanvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    canvas.beginPath();
+    canvas.fillStyle="#0000ff";
     // Draws a circle of radius 20 at the coordinates 100,100 on the canvas
-    context.arc(100,100,20,0,Math.PI*2,true); context.closePath();
-    context.fill();
+    canvas.arc(100,100,20,0,Math.PI*2,true); context.closePath();
+    canvas.fill();
 }
