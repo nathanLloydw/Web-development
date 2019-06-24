@@ -57,6 +57,12 @@ a:hover
   padding: 0;
 }
 
+.nav .dropdown:hover
+  {
+   color:green; 
+    display:block;
+  }
+
 .nav .name 
 {
   display: none;
@@ -175,7 +181,10 @@ footer ul li
     margin-right: auto;
     color: white;
  }
-
+.nav .dropdown:hover
+  {
+   color:green; 
+  }
  main 
  {
     padding: 30px;
