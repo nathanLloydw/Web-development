@@ -47,13 +47,10 @@ a:hover
   text-align: center;
 }
 
-#dropdownMenu:hover
+#dropdownMenu:hover + .nav .dropdown
 {
-  .nav .dropdown
-  {
    color:green; 
    display:block;
-  }
 }
 
 .nav 
@@ -184,13 +181,10 @@ footer ul li
     margin-right: auto;
     color: white;
  }
-#dropdownMenu:hover
+#dropdownMenu:hover + .nav .dropdown
 {
-  .nav .dropdown
-  {
    color:green; 
    display:block;
-  }
 }
  main 
  {
