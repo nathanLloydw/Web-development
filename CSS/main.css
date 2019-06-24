@@ -47,19 +47,6 @@ a:hover
   text-align: center;
 }
 
-.nav .dropdown
-{
- display:none; 
-}
-
-#dropdownMenu:hover + .nav .dropdown
-{
-   color:green; 
-   display:block;
-}
-
-
-
 .nav 
 {
   display: flex;
@@ -189,16 +176,6 @@ footer ul li
     color: white;
  }
   
- .nav .dropdown
-{
- display:none; 
-}
-  
-#dropdownMenu:hover + .nav .dropdown
-{
-   color:green; 
-   display:block;
-}
  main 
  {
     padding: 30px;
