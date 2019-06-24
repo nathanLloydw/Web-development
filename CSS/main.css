@@ -137,7 +137,6 @@ footer ul li
  .flex 
  {
       display: flex;
-      margin: 10 auto;
  }
 
  .flex:first-of-type
