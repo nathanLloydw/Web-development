@@ -1,5 +1,13 @@
 
 let player;
+let cImg001;
+let bImg;
+
+function preload()
+{
+    cImg001 = loadImage('../rescources/ninjarun/png/run001.png');
+    bImg = loadImage('../rescources/gameBackground.png');
+}
 
 function setup() 
 {
