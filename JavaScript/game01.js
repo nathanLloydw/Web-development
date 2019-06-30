@@ -1,13 +1,23 @@
-var context;
 
-function init()
+let player;
+
+function setup() 
 {
-    canvas = myCanvas.getContext('2d');
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    canvas.beginPath();
-    canvas.fillStyle="#0000ff";
-    // Draws a circle of radius 20 at the coordinates 100,100 on the canvas
-    canvas.arc(100,100,20,0,Math.PI*2,true); context.closePath();
-    canvas.fill();
+    createCanvas(600,500);
+    player = new Player();
+}
+
+function keyPressed()
+{
+    if(key == ' ')
+    {
+        player.jump();
+    }
+}
+
+function draw() 
+{
+    background(220);
+    player.show();
+    player.move();
 }
