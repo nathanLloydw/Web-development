@@ -32,7 +32,7 @@ function draw()
 { 
     background(bImg);
 
-    if(random(1) < 0.005)
+    if(random(1) < 0.009)
     {
         trees.push(new obstacle());
     }
@@ -41,6 +41,10 @@ function draw()
     {
        t.move();
        t.show(); 
+       if(player.hits(t))
+       {
+           noLoop();
+       }
     }
    
     player.show();

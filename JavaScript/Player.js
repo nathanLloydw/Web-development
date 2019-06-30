@@ -6,12 +6,28 @@ class Player
         this.x = 50;
         this.y = height - this.size;
         this.vy = 0;
-        this.gravity = 0.8;
+        this.gravity = 0.5;
+    }
+
+    hits(tree)
+    {
+        if((this.x < tree.x + tree.size) &&(this.x + this.size > tree.x) && (this.y < tree.y + tree.size) && (this.y + this.size > tree.y) )
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     jump()
     {
-        this.vy = -15;
+        if(this.y == height - this.size)
+        {
+             this.vy = -15;
+        }
+       
     }
 
     move()
@@ -24,6 +40,10 @@ class Player
     show()
     {
         image(cImg001,this.x,this.y,this.size,this.size);
+        //fill(255,50);
+        //rect(this.x,this.y,this.size,this.size);
     }
+
+   
 
 }
