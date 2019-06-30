@@ -2,8 +2,8 @@ class Player
 {
     constructor()
     {
-        this.size = 50;
-        this.x = this.size;
+        this.size = 100;
+        this.x = 50;
         this.y = height - this.size;
         this.vy = 0;
         this.gravity = 0.8;
@@ -11,7 +11,7 @@ class Player
 
     jump()
     {
-        this.vy = -20;
+        this.vy = -15;
     }
 
     move()
@@ -23,7 +23,7 @@ class Player
     
     show()
     {
-        rect(this.x,this.y,this.size,this.size);
+        image(cImg001,this.x,this.y,this.size,this.size);
     }
 
 }

@@ -5,13 +5,13 @@ let bImg;
 
 function preload()
 {
-    cImg001 = loadImage('../rescources/ninjarun/png/run001.png');
-    bImg = loadImage('../rescources/gameBackground.png');
+    cImg001 = loadImage('https://raw.githubusercontent.com/nathanLloydw/Web-development/master/resources/ninjarun/png/Run__001.png');
+    bImg = loadImage('https://raw.githubusercontent.com/nathanLloydw/Web-development/master/resources/gameBackground.png');
 }
 
 function setup() 
 {
-    createCanvas(600,500);
+    createCanvas(800,600);
     player = new Player();
 }
 
@@ -25,7 +25,7 @@ function keyPressed()
 
 function draw() 
 {
-    background(220);
+    background(bImg);
     player.show();
     player.move();
 }
