@@ -40,6 +40,7 @@ class Player
     show()
     {
         image(cImg001,this.x,this.y,this.size,this.size);
+        //show collision box:
         //fill(255,50);
         //rect(this.x,this.y,this.size,this.size);
     }
