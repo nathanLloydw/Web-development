@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+/* structure Set-up */
 html
 {
   background:url(https://suki-says.co.uk/wp-content/uploads/2014/03/simple-1160x725.jpg);
@@ -32,12 +33,8 @@ a:hover
   color: white;
 }
 
-.flex p a:hover
-{
-   color:black; 
-}
-/* Section Styles */
-.main-nav 
+/* navigation bar styles Styles */
+.navbar
 {
   width: 100%;
   background: #2f2f2f;
@@ -49,6 +46,7 @@ a:hover
 
 .nav 
 {
+  max-width: 1500px;
   display: flex;
   justify-content: space-around;
   font-weight: 700;
@@ -59,7 +57,9 @@ a:hover
 
 .nav .name 
 {
-  display: none;
+  display: block;
+  margin-right: auto;
+  color: white;
 }
 
 .nav li 
@@ -72,12 +72,14 @@ a:hover
   transition: all .5s;
 }
 
+/* header, titles and background Styles */
 header 
 {
   text-align: center;
   background: url(https://raw.githubusercontent.com/nathanLloydw/Web-development/master/resources/pokemonBackgroundFinal.png) no-repeat bottom right ;
   background-size: cover;
   overflow: hidden;
+  min-height: 450px;
 }
 
 header .profile-image 
@@ -105,11 +107,15 @@ p.tag.location
     font-size: 20px;
 }
 
+/* footer and contact details styles Styles */
 footer 
 {
   background: #2f2f2f;
   width: 100%;
   min-height: 30px;
+  font-size: 1.3em;
+  max-width: 100%;
+  margin: 40px auto;
 }
 
 footer .copyright 
@@ -134,69 +140,36 @@ footer ul li
   text-align: center;
 }
 
- .flex 
- {
-      display: flex;
- }
+/* main body content styles Styles */
+main 
+{
+  padding: 30px;
+}
 
- .flex:first-of-type
- {
-   background-image:linear-gradient(#358242,#1c4022,#232323);
- }
+main p 
+{
+  line-height: 1.6em;
+}
+
+.flex 
+{
+  display: flex;
+}
+
+.flex:first-of-type
+{
+  background-image:linear-gradient(#358242,#1c4022,#232323);
+}
   
 .flex:nth-child(odd)
- {
-   background:#232323;
-   clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
- }
-  
- .flex:nth-child(3)
- {
-   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
- }
-
-@media screen and (min-width: 720px) 
 {
- header 
- {
-    min-height: 450px;
- }
-
- .nav 
- {
-    max-width: 1500px;
- }
-
- .nav .name 
- {
-    display: block;
-    margin-right: auto;
-    color: white;
- }
-  
- main 
- {
-    padding: 30px;
- }
-
- main p 
- {
-    line-height: 1.6em;
- }
-
- footer 
- {
-    font-size: 1.3em;
-    max-width: 100%;
-    margin: 40px auto;
- }
-  
-  footer ul
-  {
-     list-style-type: none;
-     vertical-align: middle;
-     margin: auto;
-     padding: 0;
-  }
+  background:#232323;
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
 }
+  
+.flex:nth-child(3)
+{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+}
+
 
