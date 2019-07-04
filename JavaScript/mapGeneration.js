@@ -1,5 +1,5 @@
 let tileSize = 25;
-let scl = 0.2;
+let scl = 0.1;
 
 function getNoiseColor(x,y)
 {
@@ -25,15 +25,15 @@ function setup()
 {
     createCanvas(800,800);
     noStroke();
-    colorMode(HSB);
+    //colorMode(HSB);
     for(i = 0; i < width/tileSize;i++)
     {
         for(j = 0; j < height/tileSize;j++)
         {
-            //let c = getNoiseColor(i,j);
-            //console.log(c);
             fill(getNoiseColor(i,j));
+            //fill(noise(i*scl,j*scl) * 255)
             rect(i * tileSize, j * tileSize,tileSize,tileSize);
+            
         }
     }
 }
