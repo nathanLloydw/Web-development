@@ -1,10 +1,11 @@
 let tileSize = 2;
 let scl = 0.005; 
+let up = true;
 
 function getNoiseColor(x,y)
-{
+{ 
     noiseNum = noise(x*scl,y*scl);
-
+    
     if(noiseNum < 0.25){return color(16,93,134);}
     else if(noiseNum < 0.27){return color(14,99,145);} 
     else if(noiseNum < 0.28){return color(17,106,154);} 
@@ -51,15 +52,18 @@ function setup()
 {
     createCanvas(800,800);
     noStroke();
+    centreW = (width/tileSize)/2;
+    centreH = (height/tileSize)/2;
 
     for(i = 0; i < width/tileSize;i++)
     {
         for(j = 0; j < height/tileSize;j++)
         {
             fill(getNoiseColor(i,j));
-            //fill(noise(i*scl,j*scl) * 255)
-            rect(i * tileSize, j * tileSize,tileSize,tileSize);
+           
             
+            //fill(noise(i*scl,j*scl) * 255);
+            rect(i * tileSize, j * tileSize,tileSize,tileSize);  
         }
     }
 }
