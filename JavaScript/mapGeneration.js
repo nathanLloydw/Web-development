@@ -1,5 +1,5 @@
-let tileSize = 25;
-let scl = 0.1;
+let tileSize = 5;
+let scl = 0.04;
 
 function getNoiseColor(x,y)
 {
