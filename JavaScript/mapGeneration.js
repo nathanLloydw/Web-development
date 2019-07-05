@@ -142,6 +142,11 @@ function setup()
 
     buildMap();
     drawCircleGradiant(size-50,size/2,size/2);
+
+    let gradiantColor1 = get(0,0);
+    let gradiantColor2 = get(200,200);
+    let gradiantColor3 = get(400,400);
+    console.log(gradiantColor1,gradiantColor2,gradiantColor3);
     
     //drawGrayMap();
     //drawColoredMap(); 
