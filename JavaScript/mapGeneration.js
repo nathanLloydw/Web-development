@@ -66,7 +66,7 @@ function drawColoredMap()
             if(IslandBoolean)
             {
                 gradiantColor = get(i*tileSize,j*tileSize);
-                islandedColor = Map[i][j] - ((gradiantColor[0]/255) / 1.5);
+                islandedColor = Map[i][j] - ((gradiantColor[0]/255));
                 c = getNoiseColor(islandedColor);
             }
             else
