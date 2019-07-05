@@ -66,7 +66,7 @@ function drawColoredMap()
             if(IslandBoolean)
             {
                 gradiantColor = get(i*tileSize,j*tileSize);
-                islandedColor = Map[i][j] - ((gradiantColor[0]/255) / 2);
+                islandedColor = Map[i][j] - ((gradiantColor[0]/255) / 1.5);
                 c = getNoiseColor(islandedColor);
             }
             else
@@ -109,16 +109,24 @@ function buildMap()
 }
 
 
-function drawCircleGradiant(size,x,y)
+function drawCircleGradiant(width,height,x,y)
 {
-  size = size;
+  
   colorNum = 255;
   background(255);
-  for(i = size; i > 0;i=i-tileSize+1)
+  width+=50;
+  height+=50;
+  for(i = height; i > 0;i=i-7)
   {  
-    colorNum = colorNum - tileSize-1;
+    width = width - 10;
+    height = height - 10;
+
+    colorNum = colorNum - 5.5;
     fill(colorNum);
-    circle(x,y,i);
+
+    //circle(x,y,i);
+    ellipse(x,y,width,height);
+    
   }
 }
 
@@ -130,7 +138,7 @@ function setup()
     noStroke(); 
 
     buildMap();
-    drawCircleGradiant(size+100,width/2,height/2);
+    drawCircleGradiant(width,height,width/2,height/2);
     
     drawColoredMap(); 
 }
