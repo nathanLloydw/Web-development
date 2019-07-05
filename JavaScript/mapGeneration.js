@@ -126,9 +126,9 @@ function drawCircleGradiant(size,x,y)
   size = size;
   colorNum = 0;
   background(0);
-  for(i = size; i > 0;i=i-10)
+  for(i = size; i > 0;i=i-15)
   {  
-    colorNum = colorNum + 10;
+    colorNum = colorNum + 15;
     fill(colorNum);
     circle(x,y,i);
   }
@@ -141,7 +141,7 @@ function setup()
     noStroke(); 
 
     buildMap();
-    drawCircleGradiant(size-20,size/2,size/2);
+    drawCircleGradiant(size-50,size/2,size/2);
     
     //drawGrayMap();
     //drawColoredMap(); 
