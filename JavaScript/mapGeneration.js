@@ -108,13 +108,18 @@ function buildMap()
     }
 }
 
+function getRndInteger(min, max) 
+{
+    return Math.floor(Math.random() * (max - min) ) + min;
+}
+
 
 function drawCircleGradiant(width,height,x,y)
 {
   
   colorNum = 255;
   background(255);
-  width+=50;
+  width = getRndInteger(height+50,width+50);
   height+=50;
   for(i = height; i > 0;i=i-7)
   {  
