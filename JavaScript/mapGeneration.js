@@ -1,12 +1,10 @@
-let tileSize = 2;
-let scl = 0.005;
-//let tileSize = 20;
-//let scl = 0.5;
+let tileSize = 5;
+let scl = 0.02;
 
 let size = 800;
 var Map = [];
 let button;
-let colorBoolean = true;
+let IslandBoolean = true;
 
 function getNoiseColor(noiseNum)
 { 
@@ -64,9 +62,20 @@ function drawColoredMap()
     {
         for(j = 0; j < cols;j++)
         {
-            c = getNoiseColor(Map[i][j]);
+              
+            if(IslandBoolean)
+            {
+                gradiantColor = get(i*tileSize,j*tileSize);
+                islandedColor = Map[i][j] - ((gradiantColor[0]/255) / 2);
+                c = getNoiseColor(islandedColor);
+            }
+            else
+            {
+                c = getNoiseColor(Map[i][j]);
+            }
+            
             fill(c);
-            rect(i * tileSize, j * tileSize,tileSize,tileSize);  
+            rect(i * tileSize, j * tileSize,tileSize,tileSize);
         }
     }
 }
@@ -99,36 +108,15 @@ function buildMap()
     }
 }
 
-function refresh()
-{
-    console.log('test');
-    location.reload();
-}
-
-function colorModeSwap()
-{
-    clear();
-    if(colorBoolean)
-    {
-        colorBoolean = false;
-        drawGrayMap();
-    }
-    else
-    {
-        colorBoolean = true;
-        drawColoredMap();
-    }
-    
-}
 
 function drawCircleGradiant(size,x,y)
 {
   size = size;
-  colorNum = 0;
-  background(0);
-  for(i = size; i > 0;i=i-15)
+  colorNum = 255;
+  background(255);
+  for(i = size; i > 0;i=i-tileSize+1)
   {  
-    colorNum = colorNum + 15;
+    colorNum = colorNum - tileSize-1;
     fill(colorNum);
     circle(x,y,i);
   }
@@ -136,20 +124,15 @@ function drawCircleGradiant(size,x,y)
 
 function setup() 
 {
-    size = 800;
-    createCanvas(size,size);
+    width = 1600;
+    height = 900;
+    createCanvas(width,height);
     noStroke(); 
 
     buildMap();
-    drawCircleGradiant(size-50,size/2,size/2);
-
-    let gradiantColor1 = get(0,0);
-    let gradiantColor2 = get(200,200);
-    let gradiantColor3 = get(400,400);
-    console.log(gradiantColor1[0]/255,gradiantColor2[0]/255,gradiantColor3[0]/255);
+    drawCircleGradiant(size+100,width/2,height/2);
     
-    //drawGrayMap();
-    //drawColoredMap(); 
+    drawColoredMap(); 
 }
 
 function draw() 
