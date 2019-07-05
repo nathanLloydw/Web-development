@@ -146,7 +146,7 @@ function setup()
     let gradiantColor1 = get(0,0);
     let gradiantColor2 = get(200,200);
     let gradiantColor3 = get(400,400);
-    console.log(gradiantColor1,gradiantColor2,gradiantColor3);
+    console.log(gradiantColor1[0]/255,gradiantColor2[0]/255,gradiantColor3[0]/255);
     
     //drawGrayMap();
     //drawColoredMap(); 
