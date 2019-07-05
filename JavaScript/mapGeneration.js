@@ -1,7 +1,8 @@
 let tileSize = 2;
 let scl = 0.005;
-//let tileSize = 50;
+//let tileSize = 20;
 //let scl = 0.5;
+
 let size = 800;
 var Map = [];
 let button;
@@ -47,10 +48,10 @@ function getNoiseColor(noiseNum)
         case(noiseNum < 0.64):return color(80,64,26);
         case(noiseNum < 0.66):return color(104,89,53);
         case(noiseNum < 0.68):return color(110,100,75);
-        case(noiseNum < 0.7): return color(121,115,102); 
-        case(noiseNum < 0.72): return color(144,141,133);
-        case(noiseNum < 0.75): return color(182,181,179);
-        case(noiseNum < 1.0): return color(224,223,222); //mountain-top
+        case(noiseNum < 0.7):return color(121,115,102); 
+        case(noiseNum < 0.72):return color(144,141,133);
+        case(noiseNum < 0.75):return color(182,181,179);
+        case(noiseNum < 1.0):return color(224,223,222); //mountain-top
     }
     return color(0,0,0);
 }
@@ -125,9 +126,9 @@ function drawCircleGradiant(size,x,y)
   size = size;
   colorNum = 0;
   background(0);
-  for(i = size; i > 0;i--)
+  for(i = size; i > 0;i=i-10)
   {  
-    colorNum = colorNum + 1.5;
+    colorNum = colorNum + 10;
     fill(colorNum);
     circle(x,y,i);
   }
@@ -137,11 +138,13 @@ function setup()
 {
     size = 800;
     createCanvas(size,size);
-    noStroke();
+    noStroke(); 
 
-    drawCircleGradiant(size-size/10,size/2,size/2);
     buildMap();
-    drawColoredMap(); 
+    drawCircleGradiant(size-20,size/2,size/2);
+    
+    //drawGrayMap();
+    //drawColoredMap(); 
 }
 
 function draw() 
