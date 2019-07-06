@@ -1,7 +1,6 @@
 let tileSize = 5;
 let scl = 0.02;
 
-let size = 800;
 var Map = [];
 let button;
 let IslandBoolean = true;
@@ -116,23 +115,24 @@ function getRndInteger(min, max)
 
 function drawCircleGradiant(width,height,x,y)
 {
-  
-  colorNum = 255;
-  background(255);
-  width = getRndInteger(height+50,width+50);
-  height+=50;
-  for(i = height; i > 0;i=i-7)
-  {  
-    width = width - 10;
-    height = height - 10;
+    distance = 0.01;
+    colorNum = 255;
+    background(255);
+    width = getRndInteger(height+400,width-25);
+    height-=25;
+    for(i = height; i > 0;i=i-distance)
+    {   
+        distance=distance+0.04;
+        
+        width = width - distance;
+        height = height -distance;
+        
+        
+        colorNum = colorNum - 1.5;
+        fill(colorNum);
 
-    colorNum = colorNum - 5.5;
-    fill(colorNum);
-
-    //circle(x,y,i);
-    ellipse(x,y,width,height);
-    
-  }
+        ellipse(x,y,width,height);
+    }
 }
 
 function setup() 
