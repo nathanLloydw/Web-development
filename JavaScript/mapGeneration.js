@@ -1,5 +1,5 @@
 let tileSize = 5;
-let scl = 0.02;
+let scl = 0.018;
 
 var Map = [];
 let button;
