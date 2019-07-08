@@ -107,14 +107,14 @@ function drawCircleGradiant(width,height,x,y)
     background(255);
     if(height < width)
     {
-        width = getRndInteger(height,width);
+        width = getRndInteger(height,width-20);
     }
     else
     {
-        height = getRndInteger(width,height);
+        height = getRndInteger(width,height-20);
     }
      
-    for(i = height; i > 100;i=i-distance)
+    for(i = height; i > 10;i=i-distance)
     {   
         distance=distance+0.04;
         
@@ -141,8 +141,8 @@ function setup()
     noStroke(); 
 
     drawCircleGradiant(windowWidth,windowHeight,windowWidth/2,windowHeight/2);
-    //buildMap();
-    //drawMap(); 
+    buildMap();
+    drawMap(); 
 }
 
 function draw() 
