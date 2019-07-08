@@ -1,5 +1,5 @@
 let tileSize = 5;
-let scl = 0.018;
+let scl = 0.02;
 
 var Map = [];
 let button;
@@ -63,10 +63,10 @@ function drawColoredMap()
         {
               
             if(IslandBoolean)
-            {
+            {   
                 gradiantColor = get(i*tileSize,j*tileSize);
                 islandedColor = Map[i][j] - ((gradiantColor[0]/255));
-                c = getNoiseColor(islandedColor);
+                c = getNoiseColor(islandedColor);   
             }
             else
             {
@@ -89,7 +89,7 @@ function buildMap()
         Map[i] = [];
         for(j = 0; j < cols;j++)
         {          
-            Map[i][j] = (noise(i*scl,j*scl)); 
+            Map[i][j] = (noise(i*scl,j*scl).toFixed(3)); 
         }
     }
 }
@@ -105,8 +105,12 @@ function drawCircleGradiant(width,height,x,y)
     distance = 0.01;
     colorNum = 255;
     background(255);
-    width = getRndInteger(height+400,width-25);
-    height-=25;
+    if(height < width)
+    {
+        width = getRndInteger(height+400,width-25);
+        height-=25;
+    }
+    
     for(i = height; i > 0;i=i-distance)
     {   
         distance=distance+0.04;
@@ -124,15 +128,15 @@ function drawCircleGradiant(width,height,x,y)
 
 function setup() 
 {
-    width = screen.width;
-    height = screen.height;
+    width = screen.width - 20;
+    height = screen.height - 160;
     createCanvas(width,height);
     noStroke(); 
 
     buildMap();
     drawCircleGradiant(width,height,width/2,height/2);
     
-    drawColoredMap(); 
+    //drawColoredMap(); 
 }
 
 function draw() 
