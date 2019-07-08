@@ -74,21 +74,8 @@ function drawColoredMap()
             }
             
             fill(c);
+            //fill(Map[i][j]*255); //black and white, noise. 
             rect(i * tileSize, j * tileSize,tileSize,tileSize);
-        }
-    }
-}
-
-function drawGrayMap()
-{
-    rows = width/tileSize;
-    cols = height/tileSize;
-    for(i = 0; i < rows;i++)
-    {
-        for(j = 0; j < cols;j++)
-        {          
-            fill(Map[i][j]*255);
-            rect(i * tileSize, j * tileSize,tileSize,tileSize);  
         }
     }
 }
@@ -137,8 +124,8 @@ function drawCircleGradiant(width,height,x,y)
 
 function setup() 
 {
-    width = 1600;
-    height = 900;
+    width = screen.width;
+    height = screen.height;
     createCanvas(width,height);
     noStroke(); 
 
