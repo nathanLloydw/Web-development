@@ -107,9 +107,17 @@ function drawCircleGradiant(width,height,x,y)
     background(255);
     if(height < width)
     {
-        width = getRndInteger(height+400,width-25);
+        width = getRndInteger(height,width-25);
         height-=25;
+        
     }
+    else
+    {
+        width -=25;
+        height-= getRndInteger(width,height-25);
+        distance = 0.01;
+    }
+    
     
     for(i = height; i > 0;i=i-distance)
     {   
@@ -136,7 +144,7 @@ function setup()
     buildMap();
     drawCircleGradiant(width,height,width/2,height/2);
     
-    drawColoredMap(); 
+    //drawColoredMap(); 
 }
 
 function draw() 
