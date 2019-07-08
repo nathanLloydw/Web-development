@@ -1,6 +1,6 @@
 let tileSize = 5;
 let scl = 0.015;
-let IslandBoolean = false;
+let IslandBoolean = true;
 
 let Map = [];
 let MapColors = ['#105D86','#0E6391','#116A9A','#1174A8','#1C75A4','#1879AD','#1D7DB0','#178AC8','#13ADDB','#0AB9EC','#19CBFF','#19E0FF',
@@ -65,19 +65,8 @@ function drawMap()
     for(i = 0; i < rows;i++)
     {
         for(j = 0; j < cols;j++)
-        {
-            if(IslandBoolean)
-            {   
-                gradiantColor = get(i*tileSize,j*tileSize);
-                islandedColor = Map[i][j] - ((gradiantColor[0]/255));
-                c = getNoiseColor(islandedColor);   
-            }
-            else
-            {
-                c = getNoiseColor(Map[i][j]);
-            }
-            
-            fill(color(MapColors[c]));
+        {   
+            fill(MapColors[Map[i][j]]);
             //fill(Map[i][j]*255); //black and white, noise. 
             rect(i * tileSize, j * tileSize,tileSize,tileSize);
         }
@@ -93,7 +82,8 @@ function buildMap()
         Map[i] = [];
         for(j = 0; j < cols;j++)
         {          
-            randomNoise = noise(i*scl,j*scl).toFixed(3);
+            randomNoise = noise(i*scl,j*scl);
+
             if(IslandBoolean)
             {
                 gradiantColor = get(i*tileSize,j*tileSize);
@@ -117,23 +107,26 @@ function drawCircleGradiant(width,height,x,y)
     background(255);
     if(height < width)
     {
-        width = getRndInteger(height,width-25);
-        height-=25;
+        width = getRndInteger(height,width);
     }
     else
     {
-        width -=25;
-        height = getRndInteger(width,height+100);
+        height = getRndInteger(width,height);
     }
      
-    for(i = height; i > 0;i=i-distance)
+    for(i = height; i > 100;i=i-distance)
     {   
         distance=distance+0.04;
         
-        width = width - distance;
-        height = height -distance;
-        
-        
+        if(width > distance)
+        {
+           width = width - distance; 
+        }
+        if(height > distance)
+        {
+           height = height -distance;
+        }
+
         colorNum = colorNum - 1.5;
         fill(colorNum);
 
@@ -141,17 +134,15 @@ function drawCircleGradiant(width,height,x,y)
     }
 }
 
+
 function setup() 
 {
-    width = windowWidth;
-    height = windowHeight;
     createCanvas(windowWidth-20,windowHeight-20);
     noStroke(); 
 
-    buildMap();
-    drawCircleGradiant(windowWidth+40,windowHeight+40,windowWidth/2,windowHeight/2);
-
-    drawMap(); 
+    drawCircleGradiant(windowWidth,windowHeight,windowWidth/2,windowHeight/2);
+    //buildMap();
+    //drawMap(); 
 }
 
 function draw() 
