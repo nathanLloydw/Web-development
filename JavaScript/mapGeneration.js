@@ -9,6 +9,7 @@ let MapColors = ['#105D86','#0E6391','#116A9A','#1174A8','#1C75A4','#1879AD','#1
                  '#563D02','#3E2D06','#50401A','#685935','#6E644B','#797366','#908D85','#B6B5B3','#E0DFDE','#E0DFDE','#E0DFDE','#E0DFDE'];
 
 
+
 function getNoiseColor(noiseNum)
 { 
     switch(true)
@@ -65,7 +66,19 @@ function drawMap()
     {
         for(j = 0; j < cols;j++)
         {
-            fill(color(MapColors[Map[i][j]]));
+            if(IslandBoolean)
+            {   
+                gradiantColor = get(i*tileSize,j*tileSize);
+                islandedColor = Map[i][j] - ((gradiantColor[0]/255));
+                c = getNoiseColor(islandedColor);   
+            }
+            else
+            {
+                c = getNoiseColor(Map[i][j]);
+            }
+            
+            fill(c);
+            //fill(Map[i][j]*255); //black and white, noise. 
             rect(i * tileSize, j * tileSize,tileSize,tileSize);
         }
     }
@@ -80,8 +93,7 @@ function buildMap()
         Map[i] = [];
         for(j = 0; j < cols;j++)
         {          
-            randomNoise = noise(i*scl,j*scl);
-
+            randomNoise = noise(i*scl,j*scl).toFixed(3);
             if(IslandBoolean)
             {
                 gradiantColor = get(i*tileSize,j*tileSize);
@@ -103,8 +115,17 @@ function drawCircleGradiant(width,height,x,y)
     distance = 0.01;
     colorNum = 255;
     background(255);
-    width = getRndInteger(height+400,width-25);
-    height-=25;
+    if(height < width)
+    {
+        width = getRndInteger(height,width-25);
+        height-=25;
+    }
+    else
+    {
+        width -=25;
+        height = getRndInteger(width,height+100);
+    }
+     
     for(i = height; i > 0;i=i-distance)
     {   
         distance=distance+0.04;
@@ -136,81 +157,19 @@ function getRandomFromArray(arr, n)
     return result;
 }
 
-function spawnAI()
-{
-    rows = width/tileSize;
-    cols = height/tileSize;
 
-    Bunnys = [];
-    Foxes = [];
-    Berries = [];
-
-    for(i = 0; i < rows;i++)
-    {
-        for(j = 0; j < cols;j++)
-        {            
-            if(Map[i][j] == 22 || Map[i][j] == 23)
-            {
-              Bunnys.push(i+","+j);
-            }
-            else if(Map[i][j] == 29 || Map[i][j] == 28)
-            {
-              Foxes.push(i+","+j);
-            }
-            else if(Map[i][j] == 16 || Map[i][j] == 15 || Map[i][j] == 14 || Map[i][j] == 13 || Map[i][j] == 12)
-            {  
-              Berries.push(i+","+j);
-            }
-            
-        }
-    }
-
-    Bunnys = getRandomFromArray(Bunnys,58);
-    Foxes = getRandomFromArray(Foxes,15);
-    Berries = getRandomFromArray(Berries,21);
-
-    for(i in Bunnys)
-    {
-        bunny = Bunnys[i];
-        cords = bunny.split(",");
-        fill(color('#804000'));
-        circle(cords[0] * tileSize, cords[1] * tileSize,tileSize,tileSize); 
-    }
-
-    for(i in Foxes)
-    {
-        fox = Foxes[i];
-        cords = fox.split(",");
-        fill(color('#B20000'));
-        circle(cords[0] * tileSize, cords[1] * tileSize,tileSize,tileSize);  
-        fill(color('#ffffff'));
-        circle(cords[0] * tileSize, cords[1] * tileSize,tileSize/2,tileSize/2);  
-    }
-
-    for(i in Berries)
-    {
-        berry = Berries[i];
-        cords = berry.split(",");
-        fill(color('#0000FF'));
-        circle(cords[0] * tileSize, cords[1] * tileSize,tileSize,tileSize);  
-    }
-}
 
 function setup() 
 {
-    width = 1600;
-    height = 900;
-    createCanvas(width,height);
+    createCanvas(windowWidth-20,windowHeight-20);
     noStroke(); 
 
+    buildMap();
+    drawCircleGradiant(windowWidth,windowHeight,windowWidth/2,windowHeight/2);
     
     drawCircleGradiant(width,height,width/2,height/2);
     buildMap();
     drawMap(); 
-
-    spawnAI();
-
-
 }
 
 function draw() 
