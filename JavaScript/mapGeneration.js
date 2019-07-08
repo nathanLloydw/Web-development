@@ -114,7 +114,7 @@ function drawCircleGradiant(width,height,x,y)
         height = getRndInteger(width,height-20);
     }
      
-    for(i = height; i > 10;i=i-distance)
+    for(i = height; i > 0;i=i-distance)
     {   
         distance=distance+0.04;
         
