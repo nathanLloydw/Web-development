@@ -144,7 +144,7 @@ function setup()
     buildMap();
     drawCircleGradiant(width,height,width/2,height/2);
     
-    //drawColoredMap(); 
+    drawColoredMap(); 
 }
 
 function draw() 
