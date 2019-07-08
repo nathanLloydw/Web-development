@@ -133,7 +133,7 @@ function drawCircleGradiant(width,height,x,y)
 
 function setup() 
 {
-    createCanvas(windowWidth,windowHeight);
+    createCanvas(windowWidth-20,windowHeight-20);
     noStroke(); 
 
     buildMap();
