@@ -77,7 +77,7 @@ function drawMap()
                 c = getNoiseColor(Map[i][j]);
             }
             
-            fill(c);
+            fill(color(MapColors[c]));
             //fill(Map[i][j]*255); //black and white, noise. 
             rect(i * tileSize, j * tileSize,tileSize,tileSize);
         }
@@ -141,34 +141,16 @@ function drawCircleGradiant(width,height,x,y)
     }
 }
 
-function getRandomFromArray(arr, n) 
-{
-    var result = new Array(n),
-        len = arr.length,
-        taken = new Array(len);
-    if (n > len)
-        throw new RangeError("getRandom: more elements taken than available");
-    while (n--) 
-    {
-        var x = Math.floor(Math.random() * len);
-        result[n] = arr[x in taken ? taken[x] : x];
-        taken[x] = --len in taken ? taken[len] : len;
-    }
-    return result;
-}
-
-
-
 function setup() 
 {
+    width = windowWidth;
+    height = windowHeight;
     createCanvas(windowWidth-20,windowHeight-20);
     noStroke(); 
 
     buildMap();
-    drawCircleGradiant(windowWidth,windowHeight,windowWidth/2,windowHeight/2);
-    
-    drawCircleGradiant(width,height,width/2,height/2);
-    buildMap();
+    drawCircleGradiant(windowWidth+40,windowHeight+40,windowWidth/2,windowHeight/2);
+
     drawMap(); 
 }
 
