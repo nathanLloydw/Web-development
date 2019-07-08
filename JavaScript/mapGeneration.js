@@ -109,16 +109,13 @@ function drawCircleGradiant(width,height,x,y)
     {
         width = getRndInteger(height,width-25);
         height-=25;
-        
     }
     else
     {
         width -=25;
-        height-= getRndInteger(width,height-25);
-        distance = 0.01;
+        height = getRndInteger(width,height+100);
     }
-    
-    
+     
     for(i = height; i > 0;i=i-distance)
     {   
         distance=distance+0.04;
@@ -136,13 +133,11 @@ function drawCircleGradiant(width,height,x,y)
 
 function setup() 
 {
-    width = screen.width - 20;
-    height = screen.height - 160;
-    createCanvas(width,height);
+    createCanvas(windowWidth,windowHeight);
     noStroke(); 
 
     buildMap();
-    drawCircleGradiant(width,height,width/2,height/2);
+    drawCircleGradiant(windowWidth,windowHeight,windowWidth/2,windowHeight/2);
     
     drawColoredMap(); 
 }
