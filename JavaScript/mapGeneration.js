@@ -99,7 +99,6 @@ function getRndInteger(min, max)
     return Math.floor(Math.random() * (max - min) ) + min;
 }
 
-
 function drawCircleGradiant(width,height,x,y)
 {
     distance = 0.01;
@@ -141,6 +140,7 @@ function setup()
     noStroke(); 
 
     drawCircleGradiant(windowWidth,windowHeight,windowWidth/2,windowHeight/2);
+    loadPixels();
     buildMap();
     drawMap(); 
 }
