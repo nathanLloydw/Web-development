@@ -1,5 +1,5 @@
 let tileSize = 5;
-let scl = 0.03;
+let scl = 0.025;
 let IslandBoolean = true;
 
 let Map = [];
