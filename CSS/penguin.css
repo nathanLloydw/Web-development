@@ -26,7 +26,7 @@
 {
     top: 10%;
     left: 25%;
-    background: (--penguin-skin,black);
+    background: var(--penguin-skin,black);
     width: 50%;
     height: 45%;
     border-radius: 70% 70% 60% 60%;
@@ -36,7 +36,7 @@
 {
     top: 40%;
     left: 23.5%;
-    background: (--penguin-skin,black);
+    background: var(--penguin-skin,black);
     width: 53%;
     height: 45%;
     border-radius: 70% 70% 100% 100%;
@@ -46,7 +46,7 @@
 {
     top: 0%;
     left: -5%;
-    background: (--penguin-skin,black);
+    background: var(--penguin-skin,black);
     width: 30%;
     height: 60%;
     border-radius: 30% 30% 120% 30%;
@@ -58,7 +58,7 @@
 {
     top: 0%;
     left: 75%;
-    background: (--penguin-skin,black);
+    background: var(--penguin-skin,black);
     width: 30%;
     height: 60%;
     border-radius: 30% 30% 30% 120%;
@@ -90,7 +90,7 @@
 {
     top: 60%;
     left: 2.5%;
-    background: (--penguin-belly,white);
+    background: var(--penguin-belly,white);
     width: 95%;
     height: 100%;
     border-radius: 120% 120% 100% 100%;
@@ -100,7 +100,7 @@
 {
     top: 85%;
     left: 60%;
-    background: (--penguin-feet,orange);
+    background: var(--penguin-feet,orange);
     width: 15%;
     height: 30%;
     border-radius: 50% 50% 50% 50%;
@@ -112,7 +112,7 @@
 {
     top: 85%;
     left: 25%;
-    background: (--penguin-feet,orange);
+    background: var(--penguin-feet,orange);
     width: 15%;
     height: 30%;
     border-radius: 50% 50% 50% 50%;
@@ -174,7 +174,7 @@
 {
     top: 60%;
     left: 40%;
-    background: (--penguin-feet,orange);
+    background: var(--penguin-feet,orange);
     width: 20%;
     height: 10%;
     border-radius: 50%;
@@ -184,7 +184,7 @@
 {
     top: 65%;
     left: 42%;
-    background: (--penguin-feet,orange);
+    background: var(--penguin-feet,orange);
     width: 16%;
     height: 10%;
     border-radius: 50%;
