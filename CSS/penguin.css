@@ -5,9 +5,13 @@
     --penguin-belly:white;
     --penguin-feet:orange;
     background:#c6faf1;
+    
+}
+.penguin * 
+{
     position: absolute;
 }
- 
+
 .penguin 
 {
     position: relative;
