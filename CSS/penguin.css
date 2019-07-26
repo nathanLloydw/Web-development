@@ -1,3 +1,11 @@
+
+:root
+{
+    --penguin-skin:gray;
+    --penguin-belly:pink;
+    --penguin-feet:pink;
+}
+
 body
 {
     background:#c6faf1;
