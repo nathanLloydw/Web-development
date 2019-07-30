@@ -44,19 +44,15 @@
   
 .right-hand 
 {
-    top: 0%;
-    left: -5%;
     background: var(--penguin-skin,black);
     width: 30%;
     height: 60%;
     border-radius: 30% 30% 120% 30%;
-    transform: rotate(45deg);
     z-index: -1;
     
     top: 5%;
     left: 25%;
     transform: rotate(130deg);
-    
     animation-duration: 3s;
     animation-name: wave;
     animation-iteration-count: infinite;
